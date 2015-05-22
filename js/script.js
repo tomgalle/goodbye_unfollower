@@ -116,6 +116,33 @@ $(window).scroll(function(){
 });
 
 
+function sbt(){
+	var str = document.getElementById('tweetinput');
+	if(navigator.cookieEnabled == false) {
+		alert("Please enable cookie");
+	}else{
+	document.getElementById("tweetsbt").style.visibility = "hidden";
+
+		var formData = {
+			txt: "aaa"
+		}
+		$.ajax({
+			type : 'POST',
+			// dataType: 'json',
+			url : "http://54.148.224.187/php/upload.php",
+			data : formData,
+			cache : false,
+			success : function(data) {
+				//document.write(data);
+				location.href=data;
+			},
+			error : function(xhr, status, error) {
+				alert("error");
+			}
+		});
+	}
+}
+
 
 
 
