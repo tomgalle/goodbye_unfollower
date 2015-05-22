@@ -1,5 +1,6 @@
+/*   GENERAL   */
 
-body {
+body{
 	font-family: Apercu-Light;
 	color: white;
 	font-size: 18px;
@@ -10,21 +11,22 @@ body {
     width: 100%;
 }
 
-video {
+a{text-decoration: none;}
+
+video{
     height: 100%;
     width: 100%;
     transform: scale(1.2);
     -webkit-transform: scale(1.2);
 }
 
-.videowrapper {
+.videowrapper{
 	height: 100%;
 	width: 100%;
 	position: absolute;
-
 }
 
-.blackoverlay {
+.blackoverlay{
  position: absolute;
  top: 0;
  left: 0;
@@ -44,32 +46,26 @@ background-color: black;
 /*   TOP   */
 
 
-
-.logotop {
-	display: block;
-    margin-left: auto;
-    margin-right: auto;
-    /*margin-top: 90px;*/
-    transition: 0.5s;
-    /*width: 2 vw;*/
-}
-
-.logobottom {
+.logotop{
 	display: block;
     margin-left: auto;
     margin-right: auto;
     transition: 0.5s;
 }
 
-.subtitle {
+.logobottom{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.5s;
+}
+
+.subtitle{
 	font-family: Apercu-Light;
 	color: white;
 	font-size: 26px;
-	/*font-size: 2.2vw;*/
-	/*font-size: 1vmin;*/
 	text-align: center;
 	margin-top: 35px;
-	/*transition: 0.5s;*/
 }
 
 
@@ -103,19 +99,17 @@ background-color: black;
 
 
 
-.block {
+.block{
 	width: 280px;
 	height: 60px;
 	margin-top: 3vw;
 	display: inline-block;
 	vertical-align: middle;  
 	/*background-color: orange;*/
-
-
 }
 
 
-.circle {
+.circle{
 	border-radius: 50%;
 	width: 70px;
 	height: 70px; 
@@ -125,19 +119,11 @@ background-color: black;
 	vertical-align: middle;
 }
 
+.circleone{ background: url(img/info_circle_01.png); }
 
-.circleone{
-	background: url(img/info_circle_01.png);
-}
+.circletwo{ background: url(img/info_circle_02.png); }
 
-.circletwo{
-	background: url(img/info_circle_02.png);
-}
-
-.circlethree{
-	background: url(img/info_circle_03.png);
-}
-
+.circlethree{ background: url(img/info_circle_03.png); }
 
 
 .text {
@@ -147,25 +133,11 @@ background-color: black;
 	font-size: 16px;
 }
 
-/*.middle {
-	width: 61vw;
-	margin: 0 auto;
-	margin-top: 6%;
-	background-color: gray;
-}
 
-*/
-
-
-
-
-
-.button {
+.button{
 	padding: 14px 0px;
 	color:black;
 	width: 190px;
-	/*height: 50px;*/
-	/*padding-top: 1.7vw;*/
 	background-color: white;
 	font-size: 18px;
 	text-align: center;
@@ -190,13 +162,10 @@ background-color: black;
 	bottom: 0;
 }
 
-.examples span {
-	font-size: 15px;
-}
+.examples span { font-size: 15px; }
 
 
-
-.arrow {
+.arrow{
 width: 0; 
 height: 0; 
 border-left: 15px solid transparent;
@@ -217,7 +186,7 @@ margin-top: 12px;
 
 
 
-.section {
+.section{
 	border: 1px solid #e3e3e3;
 	background-color: white;
 	width: 100%;
@@ -231,7 +200,6 @@ margin-top: 12px;
 .pageonewrapper{
 	height: 100%;
 	width: 100%;
-	/*position: relative;*/
 	overflow: hidden;
 }
 
@@ -243,8 +211,6 @@ margin-top: 12px;
     overflow: hidden;
     position: absolute;
 }
-
-
 
 
 .pagetwo{
@@ -316,6 +282,9 @@ body {
 
 
 }
+
+
+
 
 
 
