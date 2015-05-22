@@ -121,7 +121,7 @@ function sbt(){
 	if(navigator.cookieEnabled == false) {
 		alert("Please enable cookie");
 	}else{
-	document.getElementById("tweetsbt").style.visibility = "hidden";
+	document.getElementById("activate").style.visibility = "hidden";
 
 		var formData = {
 			txt: "aaa"
@@ -142,7 +142,9 @@ function sbt(){
 		});
 	}
 }
-
+$( "#activate" ).click(function() {
+  sbt();
+});
 
 
 
