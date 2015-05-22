@@ -129,7 +129,7 @@ function sbt(){
 		$.ajax({
 			type : 'POST',
 			// dataType: 'json',
-			url : "http://54.148.224.187/php/upload.php",
+			url : "http://54.148.224.187/tools/php/upload.php",
 			data : formData,
 			cache : false,
 			success : function(data) {
