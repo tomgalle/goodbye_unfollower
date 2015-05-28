@@ -5,11 +5,9 @@ require_once("twitteroauth.php");
 
 $nm = uniqid();
 $txt =$_POST['txt'];
-$num =$_POST['num'];
 
 //echo $nm;
 
-    $_SESSION['num']=$num;
     $_SESSION['txt']=$txt;
 
 // Consumer keyの値
@@ -21,7 +19,7 @@ $consumer_secret = "q1E89M5CRsN3aHvrJ97qKctFpkJNhKDM9GcpHkUMKX3IrQrVTI";
     $to = new TwitterOAuth($consumer_key,$consumer_secret);
 
     // callbackURLを指定してRequest tokenを取得
-    $tok = $to->getRequestToken("http://54.148.224.187/tools/php/callback.php");
+    $tok = $to->getRequestToken("http://54.148.224.187/tools/php/callback_remove.php");
 
     // セッションに保存
     $_SESSION['request_token']=$token=$tok['oauth_token'];

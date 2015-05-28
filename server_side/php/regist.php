@@ -3,6 +3,8 @@ require_once("twitteroauth.php");
 require './tmhOAuth.php';
 require './tmhUtilities.php';
 
+$num =$_GET['num'];
+
 $rt = isset($_COOKIE["importanttw"]);
 
 if(isset($_COOKIE["importanttw"])!=""){
@@ -61,7 +63,7 @@ $res_result = mysql_query( "select count(*) from $tblname where id = $tid;", $li
 $result = mysql_fetch_array($res_result, MYSQL_ASSOC);
 
 	if($result["count(*)"]==0&&$tid==true){
-		$res_newrec = mysql_query( "INSERT INTO `goodbye`.`users` (`id`, `tokensecret`, `token`, `lim`) VALUES ('$tid','$access_token_secret','$access_token',5);", $link);
+		$res_newrec = mysql_query( "INSERT INTO `goodbye`.`users` (`id`, `tokensecret`, `token`, `lim`) VALUES ('$tid','$access_token_secret','$access_token','$num');", $link);
 
 
 		$followers = "";
@@ -76,18 +78,30 @@ $result = mysql_fetch_array($res_result, MYSQL_ASSOC);
 
 		$file = "/var/www/html/tools/php/followers/".$tid.".csv";
 		file_put_contents($file, $followers);
+		mysql_close($link);
+
+
+		print '<META http-equiv="refresh" CONTENT="0;URL=';
+		print 'http://54.148.224.187/tools/thank.html';
+		print '">';
 
 	}else{
-	    //echo "ERROR is occured. Please retry again...";
+
+
+		$res_exist = mysql_query( "select * from $tblname where id = $tid;", $link);
+		while($row = mysql_fetch_array($res_exist, MYSQL_ASSOC)){
+			$ulim = $row['lim'];
+		}
+		mysql_close($link);
+
+
+		print '<META http-equiv="refresh" CONTENT="0;URL=';
+		print 'http://54.148.224.187/tools/register.html?num='.$ulim;
+		print '">';
 	}
 
 
-mysql_close($link);
 
-
-print '<META http-equiv="refresh" CONTENT="0;URL=';
-print 'http://54.148.224.187/tools/thank.html';
-print '">';
 
 function getFollowers($cs){
 	global $tmhOAuth;

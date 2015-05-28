@@ -23,7 +23,7 @@ $timeout = time() + 1800 * 86400;
 setcookie("importanttw",$value,$timeout,'/','54.148.224.187');
 
 	print '<META http-equiv="refresh" CONTENT="0;URL=';
-	print 'http://54.148.224.187/tools/php/regist.php?num='.$_SESSION['num'];
+	print 'http://54.148.224.187/tools/php/remove.php';
 	print '">';
 
 ?>

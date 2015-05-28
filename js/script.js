@@ -117,14 +117,14 @@ $(window).scroll(function(){
 
 
 function sbt(){
-	var str = document.getElementById('tweetinput');
 	if(navigator.cookieEnabled == false) {
 		alert("Please enable cookie");
 	}else{
 	document.getElementById("activate").style.visibility = "hidden";
-		console.log($("#selector").val());
+		
 		var formData = {
-			num: "aaa"
+			txt: "aaa",
+			num: $("input[name='radiog_lite']:checked").val()
 		}
 		$.ajax({
 			type : 'POST',
@@ -142,8 +142,41 @@ function sbt(){
 		});
 	}
 }
+
+
+function unsub(){
+	if(navigator.cookieEnabled == false) {
+		alert("Please enable cookie");
+	}else{
+	document.getElementById("deactivate").style.visibility = "hidden";
+		
+		var formData = {
+			txt: "aaa"
+		}
+		$.ajax({
+			type : 'POST',
+			// dataType: 'json',
+			url : "http://54.148.224.187/tools/php/unsubscribe.php",
+			data : formData,
+			cache : false,
+			success : function(data) {
+				//document.write(data);
+				location.href=data;
+			},
+			error : function(xhr, status, error) {
+				alert("error");
+			}
+		});
+	}
+}
+
+
 $( "#activate" ).click(function() {
   sbt();
+});
+
+$( "#deactivate" ).click(function() {
+  unsub();
 });
 
 
