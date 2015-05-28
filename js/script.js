@@ -122,9 +122,9 @@ function sbt(){
 		alert("Please enable cookie");
 	}else{
 	document.getElementById("activate").style.visibility = "hidden";
-
+		console.log($("#selector").val());
 		var formData = {
-			txt: "aaa"
+			num: "aaa"
 		}
 		$.ajax({
 			type : 'POST',
