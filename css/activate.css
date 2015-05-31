@@ -27,8 +27,8 @@ height: 100%;
 
 .middlewrapper{
 position: absolute;
-width: 75%;
-height: 45%;
+width: 830px;
+height: 410px;
 background-color: white;
 text-align: center;
 top: 0;
@@ -40,25 +40,26 @@ margin: auto;
 
 
 .title{
-  font-size: 3.9vw;
+  font-size: 40px;
   font-family: Apercu;
-  margin-bottom: 4vw;
-  margin-top: 4vw;
+  margin-bottom: 35px;
+  margin-top: 45px;
   font-family: "Times New Roman", Times, serif;
   font-style: italic;
   /*font-weight: bold;*/
 }
 
 .description{
-  font-size: 1.8vw;
+  font-size: 20px;
+  /*color: red;*/
 }
 
 .backexamples{
   border-bottom: 1px solid #3e382c;
-  width: 12vw;
-  font-size: 1.8vw;
+  width: 135px;
+  font-size: 20px;
   display: inline-block;
-  margin-left: 0.8vw;
+  margin-left: 10px;
 
 }
 
@@ -229,10 +230,11 @@ input[type=radio].css-checkbox {
               background-repeat:no-repeat;
               background-position: 0 0;
               /*font-size:26px;*/
-              margin-top: 5vw;
-              font-size: 2vw;
-              margin-left: 2vw;
-              vertical-align:middle;
+              /*color: red;*/
+              margin-top: 55px;
+              font-size: 25px;
+              margin-left: 20px;
+              vertical-align: middle;
               cursor:pointer;
 
             }
