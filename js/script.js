@@ -16,6 +16,10 @@ $( window ).resize(function() { setPages(); });
 
 
 
+
+
+
+
 // VIDEO RESIZE
 
 var $player = $('#player');
@@ -105,15 +109,18 @@ var run = function(){
 run();
 
 
+
 // PARALAX SCROLL VIDEO
 
 $(window).scroll(function(){
 	var scrollTop = $(window).scrollTop();
 	var parralax = -scrollTop * 0.5 + 'px';
 	$('.videowrapper').css({ "bottom": parralax });
-	// console.log(scrollTop);
-	// console.log(parralax);
 });
+
+
+
+
 
 
 function sbt(){
@@ -181,7 +188,6 @@ $( "#deactivate" ).click(function() {
 
 
 
-})();
 
 
 
@@ -195,20 +201,22 @@ $( "#deactivate" ).click(function() {
 
 
 
+// SLIDER FOR THE EXAMPLE TWEETS
 
 
 
-// just querying the DOM
+// querying the DOM
 var links = document.querySelectorAll(".itemlink");
-// var links = document.querySelectorAll(".sideselector");
-var clickLeft = document.querySelector(".goleft");
-var clickRight = document.querySelector(".goright");
+var clickLeft = document.querySelector(".left");
+var clickRight = document.querySelector(".right");
 var wrapper = document.querySelector("#tweetswrapper");
-// var sideselector = document.querySelector('')
  
 // the activeLink provides a pointer to the currently displayed item
 var activeLink = 0;
 
+// ARROW FUNCTIONS
+ clickRight.addEventListener('click', nextArrow, false);
+ clickLeft.addEventListener('click', previousArrow, false);
 
  
 // setup the event listeners
@@ -219,13 +227,6 @@ for (var i = 0; i < links.length; i++) {
     // identify the item for the activeLink
     link.itemID = i;
 }
-
-
-// ARROW FUNCTIONS
-
- clickRight.addEventListener('click', nextArrow, false);
- clickLeft.addEventListener('click', previousArrow, false);
-
  
 // set first item as active
 links[activeLink].classList.add("active");
@@ -252,13 +253,7 @@ function changePosition(link) {
 
     link.classList.add("active");
 	var position = link.getAttribute("data-pos");
-
-
-	if ( link.classList.contains('dots')) {
-    	var position = link.getAttribute("data-pos");
-    	wrapper.style.left = position;
-	}
-
+    wrapper.style.left = position;
 }
 
 
@@ -268,7 +263,6 @@ function nextArrow(){
 	if(activeLink>=links.length){activeLink = 0;}
 
 	var link = links[activeLink];
-
 	changePosition(link);
 
 }
@@ -277,12 +271,10 @@ function nextArrow(){
 function previousArrow(){
 	removeActiveLinks();
 	activeLink = activeLink - 1;
-	if(activeLink<=0){activeLink = 3;}
+	if(activeLink<0){activeLink = links.length-1;}
 
 	var link = links[activeLink];
 	changePosition(link);
-
-
 
 }
 
@@ -293,6 +285,10 @@ function previousArrow(){
 
 
 
+
+
+
+})();
 
 
 
