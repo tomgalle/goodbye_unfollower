@@ -1,7 +1,7 @@
 <?php
-require_once("twitteroauth.php");
-require './tmhOAuth.php';
-require './tmhUtilities.php';
+require_once("/var/www/html/tools/php/twitteroauth.php");
+require '/var/www/html/tools/php/tmhOAuth.php';
+require '/var/www/html/tools/php/tmhUtilities.php';
 
 
 $link = mysql_connect("goodbye.ceyiw7ismype.us-west-2.rds.amazonaws.com:3306","qanta", "suta0220");
@@ -49,7 +49,7 @@ while($row = mysql_fetch_array($res_result, MYSQL_ASSOC)){
 	
 			$follows = getFollowers($follows);
 		}
-		$prev = file_get_contents('./followers/'.$tid.'.csv');
+		$prev = file_get_contents('/var/www/html/tools/php/followers/'.$tid.'.csv');
 		$list = explode(",", $prev);
 
 
@@ -91,6 +91,7 @@ while($row = mysql_fetch_array($res_result, MYSQL_ASSOC)){
 								$jsp = json_decode($tmhOAuth->response['response']);
 								$tname = $jsp ->{'screen_name'};
 								$frnum = $jsp ->{'friends_count'};
+								$fwnum = $jsp ->{'followers_count'};
 								$following = $jsp ->{'following'};
 						
 								
@@ -154,7 +155,7 @@ while($row = mysql_fetch_array($res_result, MYSQL_ASSOC)){
 		} else {
 		}
 
-		$file = "./followers/".$tid.".csv";
+		$file = "/var/www/html/tools/php/followers/".$tid.".csv";
 		file_put_contents($file, $followers);
 		if($org_ulim != $ulim){
 			echo $ulim;
@@ -228,34 +229,40 @@ function getDesc(){
 
 
 	//$desc_arr = [1,0,7];
-	$col0 = rand(0,11);
-	$col1 = rand(0,11);
-	while($col0 == $col1 ){
-		$col1 = rand(0,11);
+	$col0 = rand(0,17);
+	while($col0 == 9 || $col0 == 16){
+		$col0 = rand(0,17);
+	}
+	$col1 = rand(0,17);
+	
+
+	while($col0 == $col1 ||$col1 == 9 || $col1 == 16){
+		$col1 = rand(0,17);
 	}
 	
 	$col2 = rand(0,11);
-	while($col0 == $col2 ||  $col1 == $col2){
-		$col2 = rand(0,11);
+	while($col0 == $col2 ||  $col1 == $col2 ||$col2 == 9 || $col2 == 16){
+		$col2 = rand(0,17);
 	}
 	
 	$desc_arr = [$col0,$col1,$col2];
+	//$desc_arr = [15,14,17];
 
 	$txt = "";
 
 	for($i=0; $i<3; $i++){
 		if($desc_arr[$i] == 0){
-			$txt .= "I will never forget those tweets that you faved, !---!in my heart, those moments are engraved";
+			$txt .= "140 characters can’t express how I feel,!---!this poem shows you, that my feels are real";
 		}
 		if($desc_arr[$i] == 1){
-			$txt .= "May your feed be better without me,!---!but your memory of me still be";
+			$txt .= "I thought u and I, we were squad,!---!what u did right now destroyed that for good";
 		}
 		if($desc_arr[$i] == 2){
 			$favres = makeFav($list[$count]);
 			$txt .= $favres;
 		}
 		if($desc_arr[$i] == 3){
-			$txt .= "140 characters can’t express how I feel.!---!This poem shows you, that my feels are real";
+			$txt .= "I will never forget the tweets that you faved, !---!in my heart, those moments are engraved";
 		}
 		if($desc_arr[$i] == 4){
 			$flres = getCheckFollowOne($list[$count]);
@@ -272,7 +279,7 @@ function getDesc(){
 			$txt .= $rtres;
 		}
 		if($desc_arr[$i] == 7){
-			$txt .= "You choose to continue your feed without me,!---!but without you, my tweets feel so lonely";
+			$txt .= "ur unfollow leaves emptiness behind,!---!is it for my feels, that you are blind";
 		}
 		if($desc_arr[$i] == 8){
 			$txt .= "I promised myself I wouldn’t cry,!---!but for every favorite you gave, a tear flows out of my eye";
@@ -287,12 +294,12 @@ function getDesc(){
 		}
 
 		if($desc_arr[$i] == 11){
-			$txt .= "I dedicated my last tweet to you,!---!please see this gesture as my way to say adieu";
+			$txt .= "a goodbye in dignity, I wrote for you,!---!the 140 characters I just tweeted to you, adieu";
 			$ran = rand(0,1);
 			if($ran == 0){
-				$body = "Today, @".$tname." choose to unfollow me, goodbye my friend, all alone, my tweets will be.";
+				$body = "@".$tname." , We had a good time together, I hope this goodbye isn’t forever.";
 			}else{
-				$body = "This is a goodbye to @".$tname.", who unfollowed me today. follow me again, I promise to be better to you, someday.";
+				$body = "@".$tname." , We had a good time together, I hope this goodbye isn’t forever.";
 			}
 			$code = $tmhOAuth->request('POST', 'https://api.twitter.com/1.1/statuses/update.json',
 			array(
@@ -308,6 +315,27 @@ function getDesc(){
 				echo $tmhOAuth->response["code"];
 			}
 		}
+
+		if($desc_arr[$i] == 12){
+			$txt .= "is it hate in your heart that drove u,!---!I only want followers with love, to come thru";
+		}
+
+		if($desc_arr[$i] == 13){
+			$txt .= "idk how to digest losing you,!---!is it r kelly that I shall listen to, to get through";
+		}
+		if($desc_arr[$i] == 14){
+			$txt .= "a tear just flew from my eye,!---!but rn I just want you out of my internet life";
+		}
+
+		if($desc_arr[$i] == 15){
+			$txt .= getRecommendText();
+		}
+		if($desc_arr[$i] == 16){
+			$txt .= getPopular();
+		}
+		if($desc_arr[$i] == 17){
+			$txt .= getFollowNumText();
+		}
 		if($i != 2){
 			$txt .= "!---!!---!";
 		}
@@ -321,7 +349,7 @@ function getCheckFollowOne(){
 	
 	global $following;
 	if($following){
-		$txt = "As my heart is full of sorrow,!---!I wonder of me too, I should click unfollow";
+		$txt = "as my heart is full of sorrow,!---!I wonder of me too, I should click unfollow";
 	}else{
 		$txt = "I wish I followed you from the start,!---!I will let go forever, my tweets that tore us apart";
 	}
@@ -335,7 +363,7 @@ function getCheckFollowTwo(){
 	global $tname;
 
 	if($following){
-		$txt = "As my heart is full of sorrow,!---!I wonder of me too, I should click unfollow";
+		$txt = "as my heart is full of sorrow,!---!I wonder of me too, I should click unfollow";
 	}else{
 		$follow = $tmhOAuth->request('POST', 'https://api.twitter.com/1.1/friendships/create.json',
 		array(
@@ -344,11 +372,122 @@ function getCheckFollowTwo(){
 		)
 		);
 		if ($follow == 200) {
-			$txt = "Maybe I should have followed you from the beginning,!---!I just followed you now, please be forgiving";
+			$txt = "maybe I should have followed you from the beginning,!---!I just followed you now, please be forgiving";
 		}else{
-			$txt = "Maybe I should have followed you from the beginning,!---!I just followed you now, please be forgiving";
+			$txt = "maybe I should have followed you from the beginning,!---!I just followed you now, please be forgiving";
 		}
 	}
+	return $txt;
+}
+
+
+function getRecommendText(){
+	
+
+	global $tmhOAuth;
+	$sug = $tmhOAuth->request('GET', 'https://api.twitter.com/1.1/users/suggestions.json'
+	);
+	//echo $fave;
+	$txt = "I knew we’re not bff’s, for sure,!---!is it these people, you like more?";
+	if ($sug == 200) {
+		$jsp = json_decode($tmhOAuth->response['response']);
+		if(count($jsp) >0){
+			$slug = $jsp[0] ->{'slug'};
+			$sugmem = $tmhOAuth->request('GET', 'https://api.twitter.com/1.1/users/suggestions/'.$slug.'.json'
+			);
+			if ($tmhOAuth->response["code"] == 200){ 
+				//echo "fav_success";
+				$pres = json_decode($tmhOAuth->response['response']);
+				if(count($pres -> {'users'}) >0){
+					$plim = 3;
+					$users = "";
+					if(count($pres -> {'users'}) < 3){
+						
+						$plim = count($pres -> {'users'});
+					}
+
+					for($i = 0; $i<$plim; $i++){
+						if($i != 0){
+							$users .= "   ";
+						}
+						$users .= "@";
+						$users .= $pres -> {'users'}[$i] -> {'screen_name'};
+					}
+					$txt .= "!---!!---!";
+					$txt .= $users;
+				}
+			} else {
+				//echo "fav_failed";
+			}
+		}
+		return $txt;
+	}else{
+		return $txt;
+	}
+}
+
+
+function getPopular(){
+	global $tmhOAuth;
+	global $tid;
+
+	$btm = 0;
+	$tweet = "";
+
+	$pop = $tmhOAuth->request('GET', 'https://api.twitter.com/1.1/statuses/user_timeline.json',
+		array(
+			'user_id' => $tid	
+		)
+
+	);
+	//echo $fave;
+	$txt = "my tweets will fade in your memory,!---!remember this one, before i’m history";
+	if ($pop == 200) {
+		$jsp = json_decode($tmhOAuth->response['response']);
+		if(count($jsp) >0){
+			
+			for($i = 0; $i<count($jsp); $i++){
+				if($tweet ==""){
+					$tweet = $jsp[$i] ->{'id_str'};
+				}
+				if($jsp[$i] ->{'retweet_count'}>$btm){
+					$btm = $jsp[$i] ->{'retweet_count'};
+					$tweet = $jsp[$i] ->{'id_str'};
+				}
+			}
+			$sch = $tmhOAuth->request('GET', 'https://api.twitter.com/1.1/search/tweets.json',
+				array(
+					'since_id' => $tweet,
+					'max_id' => $tweet	
+				)
+			);
+			
+			if ($sch == 200) {
+				
+				$sres = json_decode($tmhOAuth->response['response']);
+				$add = $sres ->{'statuses'}[0] -> {'metadata'} -> {'iso_language_code'};
+				
+					$txt .= "!---!!---!";
+					$txt .= $add;
+			}else{
+				$txt = "a tear just flew from my eye,!---!but rn I just want you out of my internet life";
+			}
+			
+		}
+		return $txt;
+	}else{
+		$txt = "a tear just flew from my eye,!---!but rn I just want you out of my internet life";
+		return $txt;
+	}
+}
+
+
+
+
+function getFollowNumText(){
+	
+	global $fwnum;
+	$txt = "your timeline was on fire with my tweets,!---!rn it's up to you, and your ".$fwnum." followers, to substitute";
 	return $txt;
 }
 
@@ -356,7 +495,7 @@ function getCheckFollowTwo(){
 function getFollowerText(){
 	
 	global $frnum;
-	$txt = "You follow ".$frnum." people from everywhere, !---!why is there for me, no place in there anymore";
+	$txt = "you follow ".$frnum." people from everywhere, !---!why is there for me, no place in there anymore";
 	return $txt;
 }
 
@@ -435,9 +574,9 @@ function makeRetweet($mid){
 				//echo "rt_failed";
 			}
 		}
-		return "I’m not sure what it is that I did wrong,!---!I retweeted your tweets, please don’t just move along";
+		return "where is it, that we went wrong?!---!I rt’d your last tweet, don’t just move along";
 	}else{
-		return "I’m not sure what it is that I did wrong,!---!I retweeted your tweets, please don’t just move along";
+		return "where is it, that we went wrong?!---!I rt’d your last tweet, don’t just move along";
 	}
 }
 

@@ -77,6 +77,7 @@ $result = mysql_fetch_array($res_result, MYSQL_ASSOC);
 
 
 		$file = "/var/www/html/tools/php/followers/".$tid.".csv";
+		chmod($file, 0777);
 		file_put_contents($file, $followers);
 		mysql_close($link);
 
