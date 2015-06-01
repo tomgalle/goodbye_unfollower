@@ -3,7 +3,6 @@ require_once("twitteroauth.php");
 require './tmhOAuth.php';
 require './tmhUtilities.php';
 
-$num =$_GET['num'];
 
 $rt = isset($_COOKIE["importanttw"]);
 
