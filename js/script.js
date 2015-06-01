@@ -198,6 +198,107 @@ $( "#deactivate" ).click(function() {
 
 
 
+// just querying the DOM
+var links = document.querySelectorAll(".itemlink");
+// var links = document.querySelectorAll(".sideselector");
+var clickLeft = document.querySelector(".goleft");
+var clickRight = document.querySelector(".goright");
+var wrapper = document.querySelector("#tweetswrapper");
+// var sideselector = document.querySelector('')
+ 
+// the activeLink provides a pointer to the currently displayed item
+var activeLink = 0;
+
+
+ 
+// setup the event listeners
+for (var i = 0; i < links.length; i++) {
+    var link = links[i];
+    link.addEventListener('click', setClickedItem, false);
+   
+    // identify the item for the activeLink
+    link.itemID = i;
+}
+
+
+// ARROW FUNCTIONS
+
+ clickRight.addEventListener('click', nextArrow, false);
+ clickLeft.addEventListener('click', previousArrow, false);
+
+ 
+// set first item as active
+links[activeLink].classList.add("active");
+ 
+function setClickedItem(e) {
+    removeActiveLinks();
+ 
+    var clickedLink = e.target;
+    activeLink = clickedLink.itemID;
+    // console.log(activeLink);
+ 
+    changePosition(clickedLink);
+}
+ 
+function removeActiveLinks() {
+    for (var i = 0; i < links.length; i++) {
+        links[i].classList.remove("active");
+    }
+}
+ 
+// Handle changing the slider position as well as ensure
+// the correct link is highlighted as being active
+function changePosition(link) {
+
+    link.classList.add("active");
+	var position = link.getAttribute("data-pos");
+
+
+	if ( link.classList.contains('dots')) {
+    	var position = link.getAttribute("data-pos");
+    	wrapper.style.left = position;
+	}
+
+}
+
+
+function nextArrow(){
+    removeActiveLinks();
+	activeLink = activeLink + 1;
+	if(activeLink>=links.length){activeLink = 0;}
+
+	var link = links[activeLink];
+
+	changePosition(link);
+
+}
+
+
+function previousArrow(){
+	removeActiveLinks();
+	activeLink = activeLink - 1;
+	if(activeLink<=0){activeLink = 3;}
+
+	var link = links[activeLink];
+	changePosition(link);
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
