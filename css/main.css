@@ -162,6 +162,7 @@ background-color: black;
 	margin: 0 auto;
 	z-index: 200;
 	bottom: 0;
+	cursor: pointer;
 }
 
 .examples span { font-size: 15px; }
@@ -347,26 +348,73 @@ margin-top: 12px;
 
 
 
+
+
+
 .footerleft{
   position: absolute;
-  bottom: 20px;
-  left: 25px;
-  font-size: 16px;
+  bottom: 15px;
+  left: 20px;
+  font-size: 15px;
   color: white;
-  border-bottom: 1px solid white;
   z-index: 200;
+  display: inline-block;
 }
+
+.credits{
+	display: inline-block;
+	color: white;
+	margin-right: 6px;
+}
+
+.credits a {color: white;}
+.credits a:hover {border-bottom: 1px solid white;}
+
+
+
+
+
+.deactivate{
+	margin-left: 4px;
+	display: inline-block;
+	color: white;
+}
+
+.deactivate a {color: white;}
+.deactivate:hover {border-bottom: 1px solid white;}
+
+
+
+
 
 
 .footerright{
   position: absolute;
-  bottom: 20px;
-  right: 25px;
-  font-size: 16px;
-  color: white;
-  border-bottom: 1px solid white;
+  bottom: 15px;
+  right: 20px;
   z-index: 200;
+  display: inline-block;
+  width: 190px;
+  height: 23px;
 }
+
+.facebook{
+	display: inline-block;
+	/*background-color: blue;*/
+	/*float: left;*/
+	position: absolute;
+		top: 0px;
+		left: 0px;
+
+}
+
+.twitter{
+	display: inline-block;
+	position: absolute;
+	top: 2px;
+	right: 0px;
+}
+
 
 
 
