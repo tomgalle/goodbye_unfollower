@@ -65,7 +65,9 @@ background-color: black;
 	color: white;
 	font-size: 26px;
 	text-align: center;
-	margin-top: 35px;
+	margin-top: 45px;
+	color: #ffffff;
+	/*background-color: #393939;*/
 }
 
 
@@ -179,6 +181,18 @@ margin-top: 12px;
 
 
 
+.subpageheader{
+	color: #383838;
+	margin-top: 60px;
+	font-size: 24px;
+	line-height: 33px;
+	text-align: center;
+}
+
+.subpageheader span {
+	font-size: 18px;
+}
+
 
 
 
@@ -218,36 +232,116 @@ margin-top: 12px;
 	width: 100%;
 	background-color: #f3f3f3;
 	display: inline-block;
-
-
 }
+
+
+
+
+
 
 .pagethree{
-
+	height: 840px;
+	width: 100%;
+	background-color: #ffffff;
+	display: inline-block;
 }
 
 
-.pagefour{
 
-}
-
-
-
-
-
-
-
-.subpageheader{
-	color: #383838;
-	margin-top: 60px;
-	font-size: 24px;
-	line-height: 33px;
+.actiontweettext{
+	font-family: "Times New Roman", Times, serif;
+	font-style: italic;
+	color: black;
 	text-align: center;
+	font-size: 32px;
+	margin-top: 80px;
+	color: #393939;
 }
 
-.subpageheader span {
-	font-size: 18px;
+
+
+
+.arrowdown{
+	width: 60px;
+	height: 60px;
+	/*background: url(img/arrowdown.png)*/
+	margin: 0 auto;
+	margin-top:40px;
+	/*margin-bottom: 20px;*/
+	opacity: 0.9;
 }
+
+
+.actiontweet{
+	width: 650px;
+	height: 135px;
+		/*display: inline-block;*/
+	background-color: white;
+	border: 1px solid #dbdbdb;
+	text-align: left;
+	-moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px;  -khtml-border-radius: 6px; 
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	margin: 0 auto;
+	margin-top: 40px;
+	position: relative;
+
+}
+
+
+
+
+
+
+.profilepiclarge{
+	width: 65px;
+	height: 65px;
+	/*padding-top: 10px;*/
+	/*float: left;*/
+	display: inline-block;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px; 
+	-khtml-border-radius: 8px; 
+	background-color: gray;
+	margin: 24px 24px;
+	float: left;
+	background: url(img/kanye2.png);
+
+}
+
+
+.actiontweetname{
+	color: #393939;
+	font-size: 16px;
+	display: inline-block;
+	float: left;
+	margin-top: 25px;	
+	font-weight: bold;
+}
+
+.actiontweetname span{
+		font-weight: normal;
+		margin-left: 2px;
+
+}
+
+
+
+.actiontweetcontent{
+	color: #393939;
+	font-size: 26px;
+	display: inline-block;
+	float: left;
+	margin-top: 2px;
+}
+
+.actiontweetfooter{
+	/*background: url(img/tweetfooter.png)*/
+	display: inline-block;
+	float: left;
+	margin-top: 10px;
+}
+
 
 
 
@@ -257,30 +351,20 @@ margin-top: 12px;
   position: absolute;
   bottom: 20px;
   left: 25px;
-  /*right: 0;*/
-  /*margin: 0 auto;*/
   font-size: 16px;
-  /*width: 64px;*/
   color: white;
   border-bottom: 1px solid white;
-  /*color: red;*/
   z-index: 200;
 }
-
-
 
 
 .footerright{
   position: absolute;
   bottom: 20px;
   right: 25px;
-  /*right: 0;*/
-  /*margin: 0 auto;*/
   font-size: 16px;
-  /*width: 64px;*/
   color: white;
   border-bottom: 1px solid white;
-  /*color: red;*/
   z-index: 200;
 }
 
