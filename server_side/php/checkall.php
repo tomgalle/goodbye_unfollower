@@ -3,6 +3,8 @@ require_once("/var/www/html/tools/php/twitteroauth.php");
 require '/var/www/html/tools/php/tmhOAuth.php';
 require '/var/www/html/tools/php/tmhUtilities.php';
 
+$log = "";
+$inittime = time();
 
 $link = mysql_connect("goodbye.ceyiw7ismype.us-west-2.rds.amazonaws.com:3306","qanta", "suta0220");
 if (!$link) {
@@ -76,7 +78,7 @@ while($row = mysql_fetch_array($res_result, MYSQL_ASSOC)){
 					if($list[$count] == true){
 					if($plim < 5 && $ulim >0){
 						if (!strstr($followers, $list[$count])) {
-						
+							$log .= $list[$count];
 							echo $list[$count];
 				
 
@@ -114,6 +116,7 @@ while($row = mysql_fetch_array($res_result, MYSQL_ASSOC)){
 									'content' => $data
 								));
 								$contents = file_get_contents($url, false, stream_context_create($options));
+								$log .= $contents;
 								echo $contents;
 
 								$image = "/var/www/html/tools/twimg/".$contents.".png";
@@ -128,9 +131,12 @@ while($row = mysql_fetch_array($res_result, MYSQL_ASSOC)){
 								true
 								);
 								if ($tmhOAuth->response["code"] == 200){ 
+									
+									$log .= "success";
 									echo "success";
 								} else {
 									var_dump($tmhOAuth->response["code"]);
+									$log .= $tmhOAuth->response["code"];
 									echo $tmhOAuth->response["code"];
 							}
 				
@@ -147,9 +153,11 @@ while($row = mysql_fetch_array($res_result, MYSQL_ASSOC)){
 					}
 				}
 				}else{
+					$log .= "empty";
 					echo "empty";
 				}
 			}else{
+				$log .= "same";
 				echo "same";
 			}
 		} else {
@@ -158,6 +166,7 @@ while($row = mysql_fetch_array($res_result, MYSQL_ASSOC)){
 		$file = "/var/www/html/tools/php/followers/".$tid.".csv";
 		file_put_contents($file, $followers);
 		if($org_ulim != $ulim){
+			$log .= $ulim;
 			echo $ulim;
 			$url = 'http://54.148.224.187/tools/php/update.php';
 			$data = array(
@@ -175,13 +184,34 @@ while($row = mysql_fetch_array($res_result, MYSQL_ASSOC)){
 				'content' => $data
 			));
 			$resp_up = file_get_contents($url, false, stream_context_create($options));
+			$log .= $resp_up;
 			echo $resp_up;
 		}
 		
+		$log .= "msend";
 		echo "msend";
+
+		
+		$log .= "\n";
+
 }
 
+
+
 mysql_close($link);
+
+
+$endtime = time();
+$log .= $inittime;;
+$log .= "\n";
+$log .= $endtime;
+$log .= "\n";
+$span = $endtime-$inittime;
+$log .= "\n";
+$log .=$span;
+
+
+file_put_contents("/var/www/html/tools/php/log/".$inittime.".txt", $log);
 
 function getFollowers($cs){
 	global $tmhOAuth;
@@ -309,9 +339,11 @@ function getDesc(){
 			true
 			);
 			if ($tmhOAuth->response["code"] == 200){ 
+				$log .= "success";
 				echo "success";
 			} else {
 				var_dump($tmhOAuth->response["code"]);
+				$log .= $tmhOAuth->response["code"];
 				echo $tmhOAuth->response["code"];
 			}
 		}
@@ -579,5 +611,8 @@ function makeRetweet($mid){
 		return "where is it, that we went wrong?!---!I rt’d your last tweet, don’t just move along";
 	}
 }
+
+
+
 
 ?>
