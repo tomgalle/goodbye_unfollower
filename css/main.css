@@ -342,10 +342,8 @@ margin-top: 12px;
 }
 
 .actiontweetfooter{
-	/*background: url(img/tweetfooter.png)*/
 	display: inline-block;
 	float: left;
-	/*margin-top: 10px;*/
 	 position: absolute;
 	 bottom: 10px;
 	 left: 110px;
@@ -417,7 +415,6 @@ margin-top: 12px;
 .deactivate:hover {border-bottom: 1px solid white;}
 
 
-
 .footerright{
   position: absolute;
   bottom: 15px;
@@ -430,11 +427,9 @@ margin-top: 12px;
 
 .facebook{
 	display: inline-block;
-	/*background-color: blue;*/
-	/*float: left;*/
 	position: absolute;
-		top: 0px;
-		left: 0px;
+	top: 0px;
+	left: 0px;
 
 }
 

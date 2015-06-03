@@ -27,42 +27,23 @@ $(".examples").click(function() {
 
 function animateFavStar(){
 	
-
-
-
 	var favStar = $(".fave"),
 	arrow = $(".arrowdown");
 	textToAnim = $(".texttoanim");
 	
-
 	$(window).on("scroll", function(){
 
-		$.fn.scrollBottom = function() { return $(document).height() - this.scrollTop() - this.height();};
+		$.fn.scrollBottom = function() { return $(document).height() - this.scrollTop() - this.height(); };
 		var distanceBottomPage = ($(window).scrollBottom());
 
-		console.log(distanceBottomPage)
-
 		if ( distanceBottomPage < 150 ) {
+			setInterval(function () {
 				favStar.addClass("anim");
 				textToAnim.addClass("animtext");
-				console.log('smaller');
+			}, 300);
 		}
 
-
 	});
-
-
-
-
-
-	// arrow.on("click", function(){
-	// 	favStar.addClass("anim");
-	// 	textToAnim.addClass("animtext");
-	// });
-
-
-
-
 
 }
 
