@@ -297,9 +297,9 @@ function getDesc(){
 			$txt .= "a goodbye in dignity, I wrote for you,!---!the 140 characters I just tweeted to you, adieu";
 			$ran = rand(0,1);
 			if($ran == 0){
-				$body = "@".$tname." , We had a good time together, I hope this goodbye isn’t forever.";
+				$body = "Goodbye @".$tname.", I'm sad to see you go.";
 			}else{
-				$body = "@".$tname." , We had a good time together, I hope this goodbye isn’t forever.";
+				$body = "Goodbye @".$tname.", I'm sad to see you go.";
 			}
 			$code = $tmhOAuth->request('POST', 'https://api.twitter.com/1.1/statuses/update.json',
 			array(
