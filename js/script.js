@@ -4,17 +4,75 @@
 function setPages() {
 	var windowHeight = $(window).height();
 	var windowWidth = $(window).width();
-	function addPages(){ $(".section").css({ "height": windowHeight, "width": windowWidth });}
+	// function addPages(){ $(".section").css({ "height": windowHeight, "width": windowWidth });}
 	function addpageOne(){ $(".pageone").css({ "height": windowHeight, "width": windowWidth });}
-	addPages();
+	// addPages();
 	addpageOne();
 }
 setPages();
+
 
 //RESIZE
 $( window ).resize(function() { setPages(); });
 
 
+// EXAMPLES SCROLL
+$(".examples").click(function() {
+	var windowHeight = $(window).height();
+    $('html, body').animate({scrollTop: windowHeight}, 400);
+});
+
+
+// ANIMATE FAVORITE ON PAGE 3 
+
+function animateFavStar(){
+	
+
+
+
+	var favStar = $(".fave"),
+	arrow = $(".arrowdown");
+	textToAnim = $(".texttoanim");
+	
+
+	$(window).on("scroll", function(){
+
+		$.fn.scrollBottom = function() { return $(document).height() - this.scrollTop() - this.height();};
+		var distanceBottomPage = ($(window).scrollBottom());
+
+		console.log(distanceBottomPage)
+
+		if ( distanceBottomPage < 150 ) {
+				favStar.addClass("anim");
+				textToAnim.addClass("animtext");
+				console.log('smaller');
+		}
+
+
+	});
+
+
+
+
+
+	// arrow.on("click", function(){
+	// 	favStar.addClass("anim");
+	// 	textToAnim.addClass("animtext");
+	// });
+
+
+
+
+
+}
+
+animateFavStar();
+
+
+
+
+
+// $("#elem").scrollBottom(); //how many pixels below element
 
 
 
@@ -120,9 +178,6 @@ $(window).scroll(function(){
 
 
 
-
-
-
 function sbt(){
 	if(navigator.cookieEnabled == false) {
 		alert("Please enable cookie");
@@ -202,7 +257,6 @@ $( "#deactivate" ).click(function() {
 
 
 // SLIDER FOR THE EXAMPLE TWEETS
-
 
 
 // querying the DOM

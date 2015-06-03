@@ -289,15 +289,21 @@ margin-top: 12px;
 }
 
 
-
+.animtext{
+ -webkit-transform: font-size 0.18s ease-in ;
+ -moz-transition: font-size 0.18s ease-in ;
+  -ms-transition: font-size 0.18s ease-in ;
+   -o-transition: font-size 0.18s ease-in ;
+      transition: font-size 0.18s ease-in ;
+      font-size: 45px;
+      color: #ffac33;
+}
 
 
 
 .profilepiclarge{
 	width: 65px;
 	height: 65px;
-	/*padding-top: 10px;*/
-	/*float: left;*/
 	display: inline-block;
 	-moz-border-radius: 8px;
 	-webkit-border-radius: 8px;
@@ -323,7 +329,6 @@ margin-top: 12px;
 .actiontweetname span{
 		font-weight: normal;
 		margin-left: 2px;
-
 }
 
 
@@ -340,7 +345,35 @@ margin-top: 12px;
 	/*background: url(img/tweetfooter.png)*/
 	display: inline-block;
 	float: left;
-	margin-top: 10px;
+	/*margin-top: 10px;*/
+	 position: absolute;
+	 bottom: 10px;
+	 left: 110px;
+
+
+}
+
+
+.fave {
+  width: 70px;
+  height: 50px;
+  background: url(img/twitter_fave.png) no-repeat;
+  background-position: 0 0;
+  display: inline-block;
+  float: right;
+  position: absolute;
+  bottom: 0px;
+  left: 190px;
+
+}
+
+.anim {
+  background-position: -3519px 0;
+  -webkit-transition: background 1s steps(55);
+     -moz-transition: background 1s steps(55);
+      -ms-transition: background 1s steps(55);
+       -o-transition: background 1s steps(55);
+          transition: background 1s steps(55);
 }
 
 
@@ -351,11 +384,14 @@ margin-top: 12px;
 
 
 
+/*  FOOTER  */
+
+
 .footerleft{
   position: absolute;
   bottom: 15px;
   left: 20px;
-  font-size: 15px;
+  font-size: 13px;
   color: white;
   z-index: 200;
   display: inline-block;
@@ -371,9 +407,6 @@ margin-top: 12px;
 .credits a:hover {border-bottom: 1px solid white;}
 
 
-
-
-
 .deactivate{
 	margin-left: 4px;
 	display: inline-block;
@@ -382,9 +415,6 @@ margin-top: 12px;
 
 .deactivate a {color: white;}
 .deactivate:hover {border-bottom: 1px solid white;}
-
-
-
 
 
 
