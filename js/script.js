@@ -1,3 +1,5 @@
+
+
 (function() {
 
 // GENERATE PAGES
@@ -12,37 +14,46 @@ function setPages() {
 setPages();
 
 
+var windowHeight = $(window).height();
+
+
 //RESIZE
 $( window ).resize(function() { setPages(); });
 
 
 // EXAMPLES SCROLL
 $(".examples").click(function() {
-	var windowHeight = $(window).height();
-    $('html, body').animate({scrollTop: windowHeight}, 400);
+	scrollToExamples();
 });
+
+function scrollToExamples(){
+	var windowHeight = $(window).height();
+	$("html, body").animate({scrollTop: windowHeight}, 400);
+}
+
 
 
 // ANIMATE FAVORITE ON PAGE 3 
+var animated = false;
 
 function animateFavStar(){
 	
 	var favStar = $(".fave"),
-	arrow = $(".arrowdown");
+	arrow = $(".arrowdown"),
 	textToAnim = $(".texttoanim");
-	
+
 	$(window).on("scroll", function(){
 
 		$.fn.scrollBottom = function() { return $(document).height() - this.scrollTop() - this.height(); };
 		var distanceBottomPage = ($(window).scrollBottom());
 
-		if ( distanceBottomPage < 150 ) {
-			setInterval(function () {
-				favStar.addClass("anim");
+		if ( distanceBottomPage < 150 && animated === false ) {
+			setTimeout(function () {
+				favStar.addClass("anim"),
 				textToAnim.addClass("animtext");
 			}, 300);
+			animated = true;
 		}
-
 	});
 
 }
@@ -50,10 +61,30 @@ function animateFavStar(){
 animateFavStar();
 
 
+// BACK TO EXAMPLES
+
+var backExamples = $(".backexamples");
+var windowLocation = (window.location.href);
+
+backExamples.on("click", function(){window.location.href = "index.html#exampletweet";});	
+	
+function exampleTweetActive(){ 
+	if ( windowLocation.indexOf("#exampletweet") > -1 ){
+		setTimeout(function(){ 
+			scrollToExamples(); 
+		}, 400);		
+	}
+};
+exampleTweetActive();
 
 
+// function removeId(){window.location.href = "index.html";}
 
-// $("#elem").scrollBottom(); //how many pixels below element
+
+// var funqueue = [];
+// funqueue.push(exampleTweetActive);
+// funqueue.push(removeId);
+// (funqueue.shift())();
 
 
 
