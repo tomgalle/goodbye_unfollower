@@ -11,7 +11,19 @@ body{
     width: 100%;
 }
 
-a{text-decoration: none;}
+a{
+	text-decoration: none;
+	outline: 0;
+}
+
+a:active, a:active, a:focus {
+    outline: none;
+    border: 0;
+}
+
+input::-moz-focus-inner { 
+  border: 0; 
+}
 
 video{
     height: 100%;
