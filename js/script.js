@@ -2,6 +2,13 @@
 
 (function() {
 
+
+
+
+var windowHeight = $(window).height();
+var windowWidth = $(window).width();
+
+
 // GENERATE PAGES
 function setPages() {
 	var windowHeight = $(window).height();
@@ -14,7 +21,8 @@ function setPages() {
 setPages();
 
 
-var windowHeight = $(window).height();
+
+
 
 
 //RESIZE
@@ -22,14 +30,14 @@ $( window ).resize(function() { setPages(); });
 
 
 // EXAMPLES SCROLL
-$(".examples").click(function() {
-	scrollToExamples();
-});
+$(".examples").click(function() {scrollToExamples();});
 
 function scrollToExamples(){
 	var windowHeight = $(window).height();
 	$("html, body").animate({scrollTop: windowHeight}, 400);
 }
+
+
 
 
 
@@ -85,6 +93,34 @@ exampleTweetActive();
 // funqueue.push(exampleTweetActive);
 // funqueue.push(removeId);
 // (funqueue.shift())();
+
+
+
+
+
+// IF ON SMALL SCREEN CHANGE SECOND SECTION SUBHEADER TEXT
+
+function changeSubheader(){
+	var windowWidth = $(window).width();	
+	var subOne = $(".sub1");
+	// var tweetsWrapper = $(".tweetswrapper");
+	// var contentContainer = $(".contentcontainer")
+
+	if (windowWidth <= 480 ){
+		subOne.empty();
+		subOne.addClass("subpageheader");
+		subOne.append("Every unfollower deserves a honorable goodbye. Here is an example:");
+
+
+
+}
+	else if ( windowWidth >= 480 ) {
+		subOne.empty();	
+		subOne.append("Every unfollower deserves a honorable goodbye. Here are some examples:");
+	}
+}
+changeSubheader();
+$(window).resize(function(){changeSubheader();});
 
 
 
@@ -345,6 +381,16 @@ function previousArrow(){
 }
 
 
+
+// $("#tweetone").on("swipeleft", function(){ 
+// 	console.log('left');
+
+//  });
+
+
+// $(".pageone").on("swipeleft",function(){
+//   alert("You swiped left!");
+// });
 
 
 

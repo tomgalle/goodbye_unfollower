@@ -19,12 +19,7 @@ height: 585px;
 position: relative;
 left: 0px;
 transition: left .5s ease-in-out;
-	
 }
-
-
-
-
 
 .tweetframe {
 	width: 650px;
@@ -32,8 +27,14 @@ transition: left .5s ease-in-out;
 	background-color: white;
 	border: 1px solid #dbdbdb;
 	text-align: left;
-	-moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px;  -khtml-border-radius: 6px; 
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	-moz-border-radius: 6px; 
+	-webkit-border-radius: 6px; 
+	border-radius: 6px;  
+	-khtml-border-radius: 6px; 
+	font-family: "HelveticaNeue-Light", 
+	"Helvetica Neue Light", "Helvetica Neue", 
+	Helvetica, Arial, "Lucida Grande", sans-serif;
+	/*font-weight: 300;*/
 }
 
 .tweetcontent {
@@ -62,10 +63,6 @@ transition: left .5s ease-in-out;
 	-khtml-border-radius: 7px; 
 	background: url(img/profile_pic_02.jpg);
 }
-
-
-
-
 
 .name {
 	font-size: 17px;
@@ -109,11 +106,8 @@ transition: left .5s ease-in-out;
 	z-index: 100;
 }
 
-
 .poem01{background: url(img/examplepoem_02.jpg);}
-
 .poem02{ background: url(img/examplepoem_04.png);}
-
 .poem03{ background: url(img/examplepoem_03.png);}
 
 
@@ -242,11 +236,6 @@ transition: left .5s ease-in-out;
 
 
 
-
-
-
-
-
 /*   ARROWS  */
 
 
@@ -282,6 +271,287 @@ transition: left .5s ease-in-out;
 .line-arrow.active {
     border-width: 2px;
 }
+
+
+
+
+
+
+/*  TABLET  */
+
+@media screen and (max-width: 768px) {
+
+.line-arrow{display: none;}
+
+#tweetswrapper{
+	font-family: "HelveticaNeue-Light", 
+	"Helvetica Neue Light", "Helvetica Neue", 
+	Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
+}
+
+.name{
+	font-family: 'Helvetica', 'Arial', sans-serif;
+	font-weight: bold;
+	margin-left: 14px;
+}
+
+} /*  --> END TABLET  */
+
+
+
+
+
+
+
+
+
+
+/*  PHONE  */
+
+
+@media screen and (max-width: 480px) {
+
+#contentcontainer{
+	width: 92vw;
+	height: 55vh;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 4vh;
+    /*border: 2px solid gray;*/
+    /*display: none;*/
+}
+
+
+#tweetswrapper{
+width: 92vw;
+height: 55vh;
+position: relative;
+left: 0px;
+/*transition: left .5s ease-in-out;*/
+/*background-size: red;*/
+/*border: 2px solid orange; */
+/*display: none;*/
+}
+
+
+#navLinks, .itemlink, #tweettwo, #tweetthree, 
+.sideselector, .tweetimg.tweettwo, .tweetimg.tweetthree {
+	display: none;
+}
+
+
+.tweetframe {
+	width: 91vw;
+	height: 54vh;
+	/*background-color: orange;*/
+	border: 1px solid #dbdbdb;
+	text-align: left;
+	/*border: 5px solid blue;*/
+
+/*	-moz-border-radius: 6px; 
+	-webkit-border-radius: 6px; 
+	border-radius: 6px;  
+	-khtml-border-radius: 6px; */
+/*	font-family: "HelveticaNeue-Light", 
+	"Helvetica Neue Light", "Helvetica Neue", 
+	Helvetica, Arial, "Lucida Grande", sans-serif;*/
+	/*font-weight: 300;*/
+}
+
+.tweetcontent {
+	float: left;
+	
+	/*width: 650px;*/
+	/*height: 585px;*/
+
+    white-space: normal;
+    background-repeat: no-repeat;
+    /*background-color: red;*/
+}
+
+
+.profile {
+	margin: 20px 15px 15px 15px; 
+	height: 52px;
+	width: 200px;
+	/*background-color: blue;*/
+}
+
+.profilepic {
+	width: 52px;
+	height: 42px;
+	padding-top: 10px;
+	float: left;
+	display: inline-block;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	border-radius: 7px; 
+	-khtml-border-radius: 7px; 
+	background: url(img/profile_pic_02.jpg);
+}
+
+
+.name {
+	font-size: 12px;
+	font-weight: bold;
+	text-align: left;
+	line-height: 20px;
+	/*display: inline;*/
+	display: block;
+	position: relative;
+	left: 12px;
+	top: 4px;
+	/*margin-top: 10px;*/
+}
+
+.handle {
+	font-size: 12px;
+	text-align: left;
+	/*display: inline-block;*/
+	margin-left: 12px;
+}
+
+.tweettext {
+	font-size: 4vw;
+	margin-left: 15px;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	font-weight: 300;
+	color: #353535;
+}
+
+
+.tweetimg{
+	width: 80vw;
+	height: 40vw;
+	/*margin: 0 auto;*/
+	float: left;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px; 
+	-khtml-border-radius: 6px; 
+	position: relative;
+	overflow: hidden;
+	z-index: 100;
+	margin-left: 15px;
+	background-color: green;
+}
+
+
+
+.poem01{background: 
+	url(img/examplepoem_02.jpg)no-repeat center;
+	background-size: 250px 141px;
+	display: none;
+}
+
+.poem02{ background: url(img/examplepoem_04.png)no-repeat center;
+	background-size: 250px 141px;
+}
+.poem03{ background: url(img/examplepoem_03.png)no-repeat center;
+background-size: 250px 141px;
+}
+
+
+
+
+
+
+
+
+
+.line {
+	width: 585px;
+	margin: 0 auto;
+	height: 15px;
+	border-bottom: 1px solid #dbdbdb;
+}
+
+.tweetbottom {
+	width: 585px;
+	height: 45px;
+	text-align: left;
+	margin: 0 auto;
+}
+
+
+.sub {
+	text-transform: uppercase;
+	font-size: 18px;
+	color: #9d9d9d;
+}
+
+.rt {
+	padding-top: 11px;
+	padding-left: 15px;
+	float: left;
+}
+
+.fav {
+	height: 36px;
+	width: 130px;
+	padding-top: 11px;
+	padding-right: 15px;
+	float: left;
+	border-right: 1px solid #dbdbdb;
+}
+
+
+.line2 {
+	width: 585px;
+	margin: 0 auto;
+	height: 15px;
+	border-top: 1px solid #dbdbdb;
+}
+
+.date {
+	text-transform: uppercase;
+	font-size: 12px;
+	color: #9d9d9d;
+	margin-left: 31px;
+}
+
+
+
+
+
+
+
+
+.line, .tweetbottom, .sub, .rt, .fav, .line2, .date {
+	display: none;
+}
+
+
+.pagethree{display: none;}
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
