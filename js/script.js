@@ -110,8 +110,7 @@ function changeSubheader(){
 		subOne.empty();
 		subOne.addClass("subpageheader");
 		subOne.append("Every unfollower deserves a honorable goodbye. Here is an example:");
-
-
+		// $(".pagetwo").addClass("section");
 
 }
 	else if ( windowWidth >= 480 ) {

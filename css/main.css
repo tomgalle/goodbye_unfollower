@@ -761,20 +761,171 @@ video{display: none;}
 	font-size: 18px;
 	line-height: 26px;
 	text-align: center;
-	padding-left: 5px;
-	padding-right: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	/*background-color: red;*/
+	display: inline-block;
+	/*float: left;*/
+
+}
+
+.pagethree .subpageheader{
+	margin-bottom: 1vh;
+	
+
+}
+
+.pagetwo{
+	height: 100vh;
+	width: 100vw;
+}
+
+
+
+.pagethree{
+	height: 100vh;
+	width: 100vw;
 }
 
 
 
 
 
+.actiontweettext{
+	font-size: 6vw;
+	margin-top: 8vw;
+	line-height: normal;
+	color: #393939;
+}
+
+.arrowdown{
+	width: 40px;
+	height: 40px;
+	margin: 0 auto;
+	margin-top: 5vh;
+
+}
 
 
+.actiontweet{
+	width: 90vw;
+	height: 35vw;
+	background-color: white;
+	border: 1px solid #dbdbdb;
+	text-align: left;
+	-moz-border-radius: 6px; 
+	-webkit-border-radius: 6px; 
+	border-radius: 6px;  
+	-khtml-border-radius: 6px; 
+	margin: 0 auto;
+	margin-top: 3vh;
+	position: inline-block;
+}
 
 
+.animtext{
+      font-size: 9vw;
+}
+
+.profilepiclarge{
+	width: 55px;
+	height: 55px;
+	display: inline-block;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px; 
+	-khtml-border-radius: 8px; 
+	background-color: gray;
+	margin: 4vw 4vw;
+	float: left;
+	background: url(img/kanye2.png) no-repeat center center;
+	background-size: 55px 55px;
+}
+
+.actiontweetname{
+	color: #393939;
+	font-size: 4vw;
+	display: inline-block;
+	float: left;
+	margin-top: 3vh;	
+	font-weight: bold;
+	position: inline-block;
+}
 
 
+.actiontweetname span{
+		font-weight: normal;
+		margin-left: 2px;
+}
+
+
+.actiontweetcontent{
+	color: #393939;
+	font-size: 4.8vw;
+	display: inline-block;
+	float: left;
+	margin-top: 4px;
+	float: left;
+	width: 60vw;
+	line-height: normal;
+	height: auto;
+}
+
+
+.actiontweetfooter{
+	display: inline-block;
+	float: left;
+	 margin-top: 3vw;
+	 width: 80px;
+	 height: 23px;
+}
+
+.fave {
+  width: 60px;
+  height: 48px;
+  background: url(img/twitter_fave.png) no-repeat center center;
+  background-position: 0 0;
+  display: inline-block;
+  float: right;
+  position: absolute;
+  bottom: 0px;
+  left: 190px;
+
+}
+
+.anim {
+  background-position: -3519px 0;
+  -webkit-transition: background 1s steps(55);
+     -moz-transition: background 1s steps(55);
+      -ms-transition: background 1s steps(55);
+       -o-transition: background 1s steps(55);
+          transition: background 1s steps(55);
+}
+
+
+.lowbutton{
+  padding-top: 0px;
+  padding-bottom: 0px;
+  color:black;
+  /*width: 160px;*/
+  width: 45vw;
+  height: 7vh; 
+  background-color: white;
+  font-size: 5vw;
+  text-align: center;
+  vertical-align: middle;
+  font-family: Apercu;
+  margin: 0 auto;
+  margin-top: 5vh;
+  cursor: pointer;
+  border: 2px solid #3e382c;
+}
+
+
+.lowbutton span{
+	position: relative;
+	top: 1.7vh;
+}
 
 
 

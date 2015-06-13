@@ -161,6 +161,11 @@ transition: left .5s ease-in-out;
 }
 
 
+
+
+
+
+
 .line2 {
 	width: 585px;
 	margin: 0 auto;
@@ -312,59 +317,44 @@ transition: left .5s ease-in-out;
 
 @media screen and (max-width: 480px) {
 
+
+
+
+
 #contentcontainer{
 	width: 92vw;
-	height: 55vh;
-    overflow: hidden;
+	height: 100vw;
+    overflow: visible;
     margin: 0 auto;
-    margin-top: 4vh;
-    /*border: 2px solid gray;*/
     /*display: none;*/
 }
 
 
 #tweetswrapper{
 width: 92vw;
-height: 55vh;
+height: 100vw;
 position: relative;
 left: 0px;
-/*transition: left .5s ease-in-out;*/
-/*background-size: red;*/
-/*border: 2px solid orange; */
-/*display: none;*/
+margin-top: 4vh;
 }
 
 
-#navLinks, .itemlink, #tweettwo, #tweetthree, 
-.sideselector, .tweetimg.tweettwo, .tweetimg.tweetthree {
-	display: none;
-}
 
 
 .tweetframe {
 	width: 91vw;
-	height: 54vh;
-	/*background-color: orange;*/
+	height: 100vw;
 	border: 1px solid #dbdbdb;
 	text-align: left;
-	/*border: 5px solid blue;*/
-
-/*	-moz-border-radius: 6px; 
-	-webkit-border-radius: 6px; 
-	border-radius: 6px;  
-	-khtml-border-radius: 6px; */
-/*	font-family: "HelveticaNeue-Light", 
-	"Helvetica Neue Light", "Helvetica Neue", 
-	Helvetica, Arial, "Lucida Grande", sans-serif;*/
-	/*font-weight: 300;*/
+	margin: 0 auto;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	border-radius: 7px; 
+	-khtml-border-radius: 7px; 
+	/*background-color: red;*/
 }
 
 .tweetcontent {
-	float: left;
-	
-	/*width: 650px;*/
-	/*height: 585px;*/
-
     white-space: normal;
     background-repeat: no-repeat;
     /*background-color: red;*/
@@ -372,9 +362,9 @@ left: 0px;
 
 
 .profile {
-	margin: 20px 15px 15px 15px; 
-	height: 52px;
-	width: 200px;
+	margin: 15px 15px; 
+	/*height: 52px;*/
+	/*width: 200px;*/
 	/*background-color: blue;*/
 }
 
@@ -393,38 +383,40 @@ left: 0px;
 
 
 .name {
-	font-size: 12px;
+	font-size: 3.7vw;
 	font-weight: bold;
 	text-align: left;
-	line-height: 20px;
+	/*line-height: 20px;*/
 	/*display: inline;*/
 	display: block;
 	position: relative;
 	left: 12px;
 	top: 4px;
 	/*margin-top: 10px;*/
+	margin-bottom: 0.1vh;
 }
 
 .handle {
-	font-size: 12px;
+	font-size: 3.7vw;
 	text-align: left;
 	/*display: inline-block;*/
 	margin-left: 12px;
+
 }
 
 .tweettext {
 	font-size: 4vw;
 	margin-left: 15px;
 	margin-top: 10px;
-	margin-bottom: 15px;
+	margin-bottom: 4vw;
 	font-weight: 300;
 	color: #353535;
 }
 
 
 .tweetimg{
-	width: 80vw;
-	height: 40vw;
+	width: 82vw;
+	height: 47vw;
 	/*margin: 0 auto;*/
 	float: left;
 	-moz-border-radius: 6px;
@@ -433,20 +425,22 @@ left: 0px;
 	-khtml-border-radius: 6px; 
 	position: relative;
 	overflow: hidden;
-	z-index: 100;
+	z-index: 1001;
 	margin-left: 15px;
-	background-color: green;
+	background-color: red;
+
 }
 
 
 
-.poem01{background: 
-	url(img/examplepoem_02.jpg)no-repeat center;
-	background-size: 250px 141px;
-	display: none;
+.poem01{
+	background: url(img/poem01@2x_mobile.jpg)no-repeat left center;
+	background-size: 82vw 47vw;
+
+	/*display: none;*/
 }
 
-.poem02{ background: url(img/examplepoem_04.png)no-repeat center;
+/*.poem02{ background: url(img/examplepoem_04.png)no-repeat center;
 	background-size: 250px 141px;
 }
 .poem03{ background: url(img/examplepoem_03.png)no-repeat center;
@@ -454,62 +448,99 @@ background-size: 250px 141px;
 }
 
 
+*/
 
-
+#navLinks, .itemlink, #tweettwo, #tweetthree, 
+.sideselector, .tweetimg.tweettwo, .tweetimg.tweetthree {
+	display: none;
+}
 
 
 
 
 
 .line {
-	width: 585px;
-	margin: 0 auto;
-	height: 15px;
+	width: 82vw;
+	/*margin: 0 auto;*/
+	height: 0px;
+	/*position: relative;*/
+	float: left;
+	/*background-color: red;*/
 	border-bottom: 1px solid #dbdbdb;
+	display: inline-block;
+	margin-left: 15px;
+	/*background-color: !;*/
+	padding-top: 1.5vh;
+	/*top: 8vh;*/
+
+
+	/*#dbdbdb*/
 }
 
 .tweetbottom {
-	width: 585px;
-	height: 45px;
+	/*width: 585px;*/
+	/*height: 45px;*/
 	text-align: left;
 	margin: 0 auto;
+	/*background-color: red;*/
+	width: 82vw;
+	height: 8vw;
 }
 
 
 .sub {
+	/*display: inline-block;*/
 	text-transform: uppercase;
-	font-size: 18px;
+	
 	color: #9d9d9d;
+	/*background-color: orange;*/
+	padding-top: 2vw;
+	height: 3.5vh;
+
+	font-size: 3.6vw;
+	width: 30vw;
 }
 
+
+
 .rt {
-	padding-top: 11px;
-	padding-left: 15px;
-	float: left;
+	/*padding-left: 2vw;*/
+	/*float: left;*/
+	/*font-size: 4vw;*/
 }
 
 .fav {
-	height: 36px;
-	width: 130px;
-	padding-top: 11px;
-	padding-right: 15px;
-	float: left;
-	border-right: 1px solid #dbdbdb;
+	
+	/*height: 36px;*/
+	/*width: 130px;*/
+	
+	/*padding-right: 10px;*/
+	/*float: left;*/
+	/*display: inline-block;*/
+	/*float: left;*/
+	/*border-right: 1px solid #dbdbdb;*/
+
 }
 
 
 .line2 {
-	width: 585px;
+	width: 82vw;
 	margin: 0 auto;
-	height: 15px;
-	border-top: 1px solid #dbdbdb;
+	/*border-top: 1px solid red;*/
+	display: inline-block;
+	margin-left: 15px;
+	height: 0px;
+	float: left;
 }
 
 .date {
 	text-transform: uppercase;
-	font-size: 12px;
+	font-size: 2.7vw;
 	color: #9d9d9d;
-	margin-left: 31px;
+	margin-left: 15px;
+	display: inline-block;
+	float: left;
+	padding-top: 1vh;
 }
 
 
@@ -520,11 +551,11 @@ background-size: 250px 141px;
 
 
 .line, .tweetbottom, .sub, .rt, .fav, .line2, .date {
-	display: none;
+	/*display: none;*/
 }
 
 
-.pagethree{display: none;}
+
 
 
 
