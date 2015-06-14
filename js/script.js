@@ -5,8 +5,12 @@
 
 
 
-var windowHeight = $(window).height();
-var windowWidth = $(window).width();
+var $windowHeight = $(window).height(),
+	$windowWidth = $(window).width(),
+	$document = $(document),
+	$window = $(window);
+
+
 
 
 // GENERATE PAGES
@@ -26,14 +30,14 @@ setPages();
 
 
 //RESIZE
-$( window ).resize(function() { setPages(); });
+$window.resize(function() { setPages(); });
 
 
 // EXAMPLES SCROLL
 $(".examples").click(function() {scrollToExamples();});
 
 function scrollToExamples(){
-	var windowHeight = $(window).height();
+	var windowHeight = $window.height();
 	$("html, body").animate({scrollTop: windowHeight}, 400);
 }
 
@@ -41,20 +45,27 @@ function scrollToExamples(){
 
 
 
+
+	
+
+
+
+
 // ANIMATE FAVORITE ON PAGE 3 
-var animated = false;
 
 function animateFavStar(){
 	
 	var favStar = $(".fave"),
 	arrow = $(".arrowdown"),
-	textToAnim = $(".texttoanim");
+	textToAnim = $(".texttoanim"),
 
-	$(window).on("scroll", function(){
+	animated = false;
+	$.fn.scrollBottom = function() { return $document.height() - this.scrollTop() - this.height(); };
 
-		$.fn.scrollBottom = function() { return $(document).height() - this.scrollTop() - this.height(); };
-		var distanceBottomPage = ($(window).scrollBottom());
-
+	$window.on("scroll", function(){
+		
+		var distanceBottomPage = ($window.scrollBottom());
+		
 		if ( distanceBottomPage < 150 && animated === false ) {
 			setTimeout(function () {
 				favStar.addClass("anim"),
@@ -63,10 +74,14 @@ function animateFavStar(){
 			animated = true;
 		}
 	});
-
 }
 
 animateFavStar();
+
+
+
+
+
 
 
 // BACK TO EXAMPLES
@@ -120,6 +135,8 @@ function changeSubheader(){
 }
 changeSubheader();
 $(window).resize(function(){changeSubheader();});
+
+
 
 
 
@@ -215,28 +232,15 @@ run();
 
 
 
-
+// PARALAX SCROLL VIDEO
 
 var $window = $(window);
 var $windowwrapper = $('.videowrapper');
 
-// PARALAX SCROLL VIDEO
-
 $(window).scroll(function(){
 	var scrollTop = $window.scrollTop();
-	var parralax = -scrollTop * 0.5 + 'px';
-	// $('.videowrapper').css({ "bottom": parralax });
-
-	console.log(parralax);
-	$windowwrapper.css({ 
-		"transform": "translateY(-"+ parralax +")",  
-		"-webkit-transform": "translateY(-"+ parralax +")", 
- 		"-moz-transition": "translateY(-"+ parralax +")", 
-  		"-ms-transition": "translateY(-"+ parralax +")", 
-   		"-o-transition": "translateY(-"+ parralax +")" 
-	});
-
-
+	var parralax =  +scrollTop * 0.4 + 'px';
+	$windowwrapper.css({ "transform": "translateY("+ parralax +")" });
 });
 
 
