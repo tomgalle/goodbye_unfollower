@@ -215,13 +215,33 @@ run();
 
 
 
+
+
+var $window = $(window);
+var $windowwrapper = $('.videowrapper');
+
 // PARALAX SCROLL VIDEO
 
 $(window).scroll(function(){
-	var scrollTop = $(window).scrollTop();
+	var scrollTop = $window.scrollTop();
 	var parralax = -scrollTop * 0.5 + 'px';
-	$('.videowrapper').css({ "bottom": parralax });
+	// $('.videowrapper').css({ "bottom": parralax });
+
+	console.log(parralax);
+	$windowwrapper.css({ 
+		"transform": "translateY(-"+ parralax +")",  
+		"-webkit-transform": "translateY(-"+ parralax +")", 
+ 		"-moz-transition": "translateY(-"+ parralax +")", 
+  		"-ms-transition": "translateY(-"+ parralax +")", 
+   		"-o-transition": "translateY(-"+ parralax +")" 
+	});
+
+
 });
+
+
+
+
 
 
 
