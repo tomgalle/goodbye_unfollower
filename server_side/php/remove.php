@@ -60,7 +60,7 @@ mysql_select_db($dbname,$link);
 $res_result = mysql_query( "delete from $tblname where id = $tid;", $link);
 
 		print '<META http-equiv="refresh" CONTENT="0;URL=';
-		print 'http://54.148.224.187/tools/deleted.html';
+		print 'http://54.148.224.187/tools/deactivate.html';
 		print '">';
 
 

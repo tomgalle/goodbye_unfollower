@@ -83,7 +83,7 @@ $result = mysql_fetch_array($res_result, MYSQL_ASSOC);
 
 
 		print '<META http-equiv="refresh" CONTENT="0;URL=';
-		print 'http://54.148.224.187/tools/thank.html';
+		print 'http://54.148.224.187/tools/activated.html?num='.$num;
 		print '">';
 
 	}else{
