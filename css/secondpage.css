@@ -429,9 +429,12 @@ margin: auto;
 }
 
 
+
+
+
 .sharetitle{
-      margin-top: 65px;
-      font-size: 21px;
+      margin-top: 4vmax;
+      font-size: 2.8vmax;
       font-family: Apercu;
 }
 
@@ -568,31 +571,13 @@ height: 75vmax;
 background-color: white;
 text-align: center;
 top: 0;
-bottom: 8vmax;
+bottom: 0;
 left: 0;
 right: 0;
 margin: auto;
 /*background-color: red;*/
 
 }
-
-
-
-
-.middlecontent{
-  /*background-color: red;*/
-  /*border: 5px solid red;*/
-  width: 70vw;
-  height: auto;
-  text-align: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 40px;
-  right: 0;
-  margin: auto;
-}
-
 
 
 
