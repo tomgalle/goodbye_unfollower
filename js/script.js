@@ -6,9 +6,9 @@
 
 
 var $windowHeight = $(window).height(),
-	$windowWidth = $(window).width(),
-	$document = $(document),
-	$window = $(window);
+$windowWidth = $(window).width(),
+$document = $(document),
+$window = $(window);
 
 
 
@@ -37,8 +37,8 @@ $window.resize(function() { setPages(); });
 $(".examples").click(function() {scrollToExamples();});
 
 function scrollToExamples(){
-	var windowHeight = $window.height();
-	$("html, body").animate({scrollTop: windowHeight}, 400);
+	var $windowHeight = $window.height();
+	$("html, body").animate({scrollTop: $windowHeight}, 400);
 }
 
 
@@ -58,7 +58,6 @@ function animateFavStar(){
 	var favStar = $(".fave"),
 	arrow = $(".arrowdown"),
 	textToAnim = $(".texttoanim"),
-
 	animated = false;
 	$.fn.scrollBottom = function() { return $document.height() - this.scrollTop() - this.height(); };
 
@@ -99,6 +98,8 @@ function exampleTweetActive(){
 	}
 };
 exampleTweetActive();
+
+
 
 
 // function removeId(){window.location.href = "index.html";}
