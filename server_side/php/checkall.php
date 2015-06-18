@@ -404,9 +404,9 @@ function getCheckFollowTwo(){
 		)
 		);
 		if ($follow == 200) {
-			$txt = "maybe I should have followed you from the beginning,!---!I just followed you now, please be forgiving";
+			$txt = "maybe I should have followed you from the beginning, I just followed you now, please be forgiving";
 		}else{
-			$txt = "maybe I should have followed you from the beginning,!---!I just followed you now, please be forgiving";
+			$txt = "maybe I should have followed you from the beginning, I just followed you now, please be forgiving";
 		}
 	}
 	return $txt;
