@@ -46,7 +46,7 @@ video{
  width: 100%;
  height: 100%;
  z-index: 102;
- opacity: 0.1;
+ opacity: 0.18;
 background-color: black;	
 }
 
@@ -135,9 +135,9 @@ background-color: black;
 	-khtml-border-radius: 50%; 
 }
 
-.circleone{ background: url(img/info_circle_01.png)no-repeat center; }
-.circletwo{ background: url(img/info_circle_02.png)no-repeat center; }
-.circlethree{ background: url(img/info_circle_03.png)no-repeat center; }
+.circleone{ background: url(../img/info_circle_01.png)no-repeat center; }
+.circletwo{ background: url(../img/info_circle_02.png)no-repeat center; }
+.circlethree{ background: url(../img/info_circle_03.png)no-repeat center; }
 
 
 .text {
@@ -331,7 +331,7 @@ margin: auto;
 	background-color: gray;
 	margin: 24px 24px;
 	float: left;
-	background: url(img/kanye2.png);
+	background: url(../img/kanye2.png);
 }
 
 .actiontweetname{
@@ -368,7 +368,7 @@ margin: auto;
 .fave {
   width: 70px;
   height: 50px;
-  background: url(img/twitter_fave.png) no-repeat;
+  background: url(../img/twitter_fave.png) no-repeat;
   background-position: 0 0;
   display: inline-block;
   float: right;
@@ -444,27 +444,35 @@ margin: auto;
 .footerright{
   position: absolute;
   bottom: 15px;
-  right: 20px;
+  right: 30px;
   z-index: 200;
   display: inline-block;
-  width: 190px;
+  /*width: 195px;*/
+  width:auto;
   height: 23px;
-}
-
-.facebook{
-	display: inline-block;
-	position: absolute;
-	top: 0px;
-	left: 0px;
-
+  /*background-color: red;*/
 }
 
 .twitter{
 	display: inline-block;
-	position: absolute;
-	top: 2px;
-	right: 0px;
+	margin-right: 8px;
 }
+
+
+
+.facebook{
+	display: inline-block;
+	position: relative;
+	bottom: 5px;
+
+
+/*	position: absolute;
+	top: 0px;
+	left: 0px;*/
+
+}
+
+
 
 
 
@@ -512,7 +520,7 @@ body{
 video{display: none;}
 
 .pageone{
-	background: url(img/video1_scr.jpg)no-repeat center center;
+	background: url(../img/video1_scr.jpg)no-repeat center center;
   	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
@@ -654,14 +662,14 @@ video{display: none;}
 (min-resolution: 192dpi) { 
 
 .circleone{ 
-	background: url(img/info_circle_01_@2x.jpg) no-repeat center; 
+	background: url(../img/info_circle_01_@2x.jpg) no-repeat center; 
 	background-size: 70px 70px;
 }
 .circletwo{ 
-	background: url(img/info_circle_02_@2x.jpg) no-repeat center; 
+	background: url(../img/info_circle_02_@2x.jpg) no-repeat center; 
 	background-size: 70px 70px;
 }
-.circlethree{ background: url(img/info_circle_03_@2x.jpg) no-repeat center;
+.circlethree{ background: url(../img/info_circle_03_@2x.jpg) no-repeat center;
 	background-size: 70px 70px;
 }
 
@@ -684,7 +692,7 @@ video{display: none;}
 video{display: none;}
 
 .pageone{
-	background: url(img/video1_scr.jpg)no-repeat center center;
+	background: url(../img/video1_scr.jpg)no-repeat center center;
   	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
@@ -738,7 +746,6 @@ video{display: none;}
   	right: 0;
   	top: 31vh;
   	margin: 0 auto;
-  	/*background-color: orange;*/
 }
 
 .block:first-child{margin-top: 0px;}
@@ -749,10 +756,7 @@ video{display: none;}
 	font-size: 4vw;
 	display: inline-block;
 	width: 45vw;
-	/*background-color: blue;*/
 	height: 6vh;
-	/*width: auto;*/
-
 	margin: 0 auto;
 	text-align: left;
 	position: static;
@@ -794,10 +798,7 @@ video{display: none;}
 	text-align: center;
 	padding-left: 10px;
 	padding-right: 10px;
-	/*background-color: red;*/
 	display: inline-block;
-	/*float: left;*/
-
 }
 
 
@@ -806,7 +807,6 @@ video{display: none;}
 }
 
 .examples{
-	/*background-color: red;*/
 	height: 22px;
 	width: 100px;
 }
@@ -881,7 +881,7 @@ video{display: none;}
 	background-color: gray;
 	margin: 4vw 4vw;
 	float: left;
-	background: url(img/kanye2.png) no-repeat center center;
+	background: url(../img/kanye2.png) no-repeat center center;
 	background-size: 55px 55px;
 }
 
@@ -926,7 +926,7 @@ video{display: none;}
 .fave {
   width: 60px;
   height: 48px;
-  background: url(img/twitter_fave.png) no-repeat center center;
+  background: url(../img/twitter_fave.png) no-repeat center center;
   background-position: 0 0;
   display: inline-block;
   float: right;
@@ -972,14 +972,14 @@ video{display: none;}
 
 
 .circleone{ 
-	background: url(img/info_circle_01_@2x.jpg) no-repeat center; 
+	background: url(../img/info_circle_01_@2x.jpg) no-repeat center; 
 	background-size: 60px 60px;
 }
 .circletwo{ 
-	background: url(img/info_circle_02_@2x.jpg) no-repeat center; 
+	background: url(../img/info_circle_02_@2x.jpg) no-repeat center; 
 	background-size: 60px 60px;
 }
-.circlethree{ background: url(img/info_circle_03_@2x.jpg) no-repeat center;
+.circlethree{ background: url(../img/info_circle_03_@2x.jpg) no-repeat center;
 	background-size: 60px 60px;
 }
 

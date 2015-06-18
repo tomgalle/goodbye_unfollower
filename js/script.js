@@ -28,9 +28,12 @@ setPages();
 
 
 
-
 //RESIZE
-$window.resize(function() { setPages(); });
+$window.resize(function() { 
+	setPages();
+	// pushDown();
+});
+
 
 
 // EXAMPLES SCROLL
@@ -42,13 +45,17 @@ function scrollToExamples(){
 }
 
 
+// // Push stuff down
+// var $margin = $("#margintop");
+// function pushDown(){
+// 	if ($windowWidth<1024){
+// 		console.log($windowWidth);
+// 		$margin.css({"margin-top":"12vh"});}
+// 	else if($windowWidth>1024){$margin.css({"margin-top":"5vh"});}
+// }
 
 
 
-// Push stuff down
-
-var $margin = $(".down");
-$margin.css({"margin-top":"10vmax"});
 
 
 	

@@ -48,16 +48,10 @@ bottom: 0;
 left: 0;
 right: 0;
 margin: auto;
-/*background-color: red;*/
-
 }
 
-
-
-
-.middlecontent{
+/*.middlecontent{
   background-color: red;
-  /*border: 5px solid red;*/
   width: 800px;
   height: 230px;
   text-align: center;
@@ -70,7 +64,7 @@ margin: auto;
 }
 
 
-
+*/
 
 
 .title{
@@ -80,6 +74,12 @@ margin: auto;
   margin-top: 40px;
   font-family: "Times New Roman", Times, serif;
   font-style: italic;
+  margin-top: 5vh;
+}
+
+#margintop{
+  margin-top: 8vh;
+
 }
 
 
@@ -88,14 +88,9 @@ margin: auto;
   width: 80%;
   height: auto;
   margin: 0 auto;
-  /*background-color: blue;*/
 }
 
 
-/*.lineheight{
-  line-height: 30px;
-}
-*/
 .backexamples{
   border-bottom: 1px solid #3e382c;
   width: 135px;
@@ -103,7 +98,6 @@ margin: auto;
   display: inline-block;
   margin-left: 10px;
   cursor: pointer;
-
 }
 
 
@@ -147,8 +141,8 @@ margin: auto;
 
 
 
-.facebook{background: url(img/facebook_share.png) no-repeat center;}
-.twitter{background: url(img/twitter_share.png) no-repeat center;}
+.facebook{background: url(../img/facebook_share.png) no-repeat center;}
+.twitter{background: url(../img/twitter_share.png) no-repeat center;}
 
 .sharecircle:first-child{margin-right: 13px;}
 .sharecircle:last-child{margin-left: 13px;}
@@ -327,7 +321,7 @@ input[type=radio].css-checkbox {
 /*video{display: none;}
 
 .pagewrapper{
-  background: url(img/video1_scr.jpg)no-repeat center center;
+  background: url(../img/video1_scr.jpg)no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -375,9 +369,10 @@ margin: auto;
 .title{
   font-size: 3.8vmax;
   margin-bottom: 4vmax;
-  margin-top: 5.5vmax;
+  /*margin-top: 5.5vmax;*/
   font-family: "Times New Roman", Times, serif;
   font-style: italic;
+
 }
 
 
@@ -454,8 +449,8 @@ margin: auto;
 
 
 
-.facebook{background: url(img/facebook_share.png) no-repeat center;}
-.twitter{background: url(img/twitter_share.png) no-repeat center;}
+.facebook{background: url(../img/facebook_share.png) no-repeat center;}
+.twitter{background: url(../img/twitter_share.png) no-repeat center;}
 
 .sharecircle:first-child{margin-right: 13px;}
 .sharecircle:last-child{margin-left: 13px;}
@@ -554,7 +549,7 @@ input[type=radio].css-checkbox {
 video{display: none;}
 
 .pagewrapper{
-  background: url(img/video1_scr.jpg)no-repeat center center;
+  background: url(../img/video1_scr.jpg)no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -583,11 +578,13 @@ margin: auto;
 
 
 .title{
-  font-size: 5.5vmax;
+  font-size: 4.5vmax;
   margin-bottom: 1.5vmax;
   margin-top: 2vmax;
   font-family: "Times New Roman", Times, serif;
   font-style: italic;
+  margin-top: 8vh;
+  /*color: red;*/
 }
 
 
@@ -643,7 +640,7 @@ input[type=radio].css-checkbox {
               vertical-align: middle;
               cursor:pointer;
               /*background-color: green;*/
-              position: inline-block;
+              position: block;
               /*width: 100%;*/
 
             }

@@ -61,7 +61,7 @@ transition: left .5s ease-in-out;
 	-webkit-border-radius: 7px;
 	border-radius: 7px; 
 	-khtml-border-radius: 7px; 
-	background: url(img/profile_pic_02.jpg);
+	background: url(../img/profile_pic_02.jpg);
 }
 
 .name {
@@ -106,9 +106,9 @@ transition: left .5s ease-in-out;
 	z-index: 100;
 }
 
-.poem01{background: url(img/examplepoem_02.jpg);}
-.poem02{ background: url(img/examplepoem_04.png);}
-.poem03{ background: url(img/examplepoem_03.png);}
+.poem01{background: url(../img/examplepoem_02.jpg);}
+.poem02{ background: url(../img/examplepoem_04.png);}
+.poem03{ background: url(../img/examplepoem_03.png);}
 
 
 
@@ -378,7 +378,7 @@ margin-top: 4vh;
 	-webkit-border-radius: 7px;
 	border-radius: 7px; 
 	-khtml-border-radius: 7px; 
-	background: url(img/profile_pic_02.jpg);
+	background: url(../img/profile_pic_02.jpg);
 }
 
 
@@ -434,16 +434,16 @@ margin-top: 4vh;
 
 
 .poem01{
-	background: url(img/poem01@2x_mobile.jpg)no-repeat left center;
+	background: url(../img/poem01@2x_mobile.jpg)no-repeat left center;
 	background-size: 82vw 47vw;
 
 	/*display: none;*/
 }
 
-/*.poem02{ background: url(img/examplepoem_04.png)no-repeat center;
+/*.poem02{ background: url(../img/examplepoem_04.png)no-repeat center;
 	background-size: 250px 141px;
 }
-.poem03{ background: url(img/examplepoem_03.png)no-repeat center;
+.poem03{ background: url(../img/examplepoem_03.png)no-repeat center;
 background-size: 250px 141px;
 }
 
