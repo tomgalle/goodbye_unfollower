@@ -266,6 +266,70 @@ input[type=radio].css-checkbox {
 
 
 
+/*  FOOTER  */
+
+
+.footerleft{
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  font-size: 13px;
+  color: white;
+  z-index: 200;
+  display: inline-block;
+}
+
+.credits{
+  display: inline-block;
+  color: white;
+  margin-right: 6px;
+}
+
+.credits a {color: white;}
+.credits a:hover {border-bottom: 1px solid white;}
+
+
+.deactivate{
+  margin-left: 4px;
+  display: inline-block;
+  color: white;
+}
+
+.deactivate a {color: white;}
+.deactivate:hover {border-bottom: 1px solid white;}
+
+
+.footerright{
+  position: absolute;
+  bottom: 15px;
+  right: 30px;
+  z-index: 200;
+  display: inline-block;
+  /*width: 195px;*/
+  width:auto;
+  height: 23px;
+  /*background-color: red;*/
+}
+
+.twitter{
+  display: inline-block;
+  margin-right: 8px;
+}
+
+
+
+.facebook{
+  display: inline-block;
+  position: relative;
+  bottom: 5px;
+
+
+/*  position: absolute;
+  top: 0px;
+  left: 0px;*/
+
+}
+
 
 
 
