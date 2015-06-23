@@ -120,7 +120,7 @@ while($row = mysql_fetch_array($res_result, MYSQL_ASSOC)){
 								echo $contents;
 
 								$image = "/var/www/html/tools/twimg/".$contents.".png";
-								$body = "Goodbye @".$tname." , please follow me again sometime. Love, @".$uname;
+								$body = "Goodbye @".$tname." ,  I’m sad to see you go.";
 
 								$code = $tmhOAuth->request('POST', 'https://api.twitter.com/1.1/statuses/update_with_media.json',
 								array(

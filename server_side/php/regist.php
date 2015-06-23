@@ -133,6 +133,7 @@ function getFollowers($cs){
 		}
 		return $cursor;
 	} else {
+		return "0";
 		//tmhUtilities::pr($tmhOAuth->response['response']);
 	}
 }
