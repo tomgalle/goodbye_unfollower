@@ -275,7 +275,7 @@ function sbt(){
 		$.ajax({
 			type : 'POST',
 			// dataType: 'json',
-			url : "http://54.148.224.187/tools/php/upload.php",
+			url : "http://goodbye-301660524.us-west-2.elb.amazonaws.com/tools/php/upload.php",
 			data : formData,
 			cache : false,
 			success : function(data) {
@@ -302,7 +302,7 @@ function unsub(){
 		$.ajax({
 			type : 'POST',
 			// dataType: 'json',
-			url : "http://54.148.224.187/tools/php/unsubscribe.php",
+			url : "http://goodbye-301660524.us-west-2.elb.amazonaws.com/tools/php/unsubscribe.php",
 			data : formData,
 			cache : false,
 			success : function(data) {

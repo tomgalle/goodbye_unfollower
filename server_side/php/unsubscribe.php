@@ -19,7 +19,7 @@ $consumer_secret = "q1E89M5CRsN3aHvrJ97qKctFpkJNhKDM9GcpHkUMKX3IrQrVTI";
     $to = new TwitterOAuth($consumer_key,$consumer_secret);
 
     // callbackURLを指定してRequest tokenを取得
-    $tok = $to->getRequestToken("http://54.148.224.187/tools/php/callback_remove.php");
+    $tok = $to->getRequestToken("http://goodbye-301660524.us-west-2.elb.amazonaws.com/tools/php/callback_remove.php");
 
     // セッションに保存
     $_SESSION['request_token']=$token=$tok['oauth_token'];

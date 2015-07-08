@@ -4,7 +4,9 @@ require '/var/www/html/tools/php/tmhOAuth.php';
 require '/var/www/html/tools/php/tmhUtilities.php';
 
 $log = "";
-$inittime = time();
+$inittime = rand();
+
+echo $inittime;
 
 $link = mysql_connect("goodbye.ceyiw7ismype.us-west-2.rds.amazonaws.com:3306","qanta", "suta0220");
 if (!$link) {
@@ -98,7 +100,7 @@ while($row = mysql_fetch_array($res_result, MYSQL_ASSOC)){
 						
 								
 						
-								$url = 'http://54.148.224.187/tools/php/gen_img.php';
+								$url = 'http://goodbye-301660524.us-west-2.elb.amazonaws.com/tools/php/gen_img.php';
 								$ord = $count+1;
 								$txt = getDesc();
 								$data = array(
@@ -120,7 +122,7 @@ while($row = mysql_fetch_array($res_result, MYSQL_ASSOC)){
 								echo $contents;
 
 								$image = "/var/www/html/tools/twimg/".$contents.".png";
-								$body = "Goodbye @".$tname." ,  I’m sad to see you go.";
+								$body = "Goodbye @".$tname.", I wrote this for you:";
 
 								$code = $tmhOAuth->request('POST', 'https://api.twitter.com/1.1/statuses/update_with_media.json',
 								array(
@@ -168,7 +170,7 @@ while($row = mysql_fetch_array($res_result, MYSQL_ASSOC)){
 		if($org_ulim != $ulim){
 			$log .= $ulim;
 			echo $ulim;
-			$url = 'http://54.148.224.187/tools/php/update.php';
+			$url = 'http://goodbye-301660524.us-west-2.elb.amazonaws.com/tools/php/update.php';
 			$data = array(
 				'tid' => $tid,
 				'ulim' => $ulim,
@@ -276,7 +278,6 @@ function getDesc(){
 	}
 	
 	$desc_arr = [$col0,$col1,$col2];
-	//$desc_arr = [15,14,17];
 
 	$txt = "";
 

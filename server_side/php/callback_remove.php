@@ -20,10 +20,10 @@ $value .= $access_token['oauth_token_secret'];
 
 
 $timeout = time() + 1800 * 86400;
-setcookie("importanttw",$value,$timeout,'/','54.148.224.187');
+setcookie("importanttw",$value,$timeout,'/','goodbye-301660524.us-west-2.elb.amazonaws.com');
 
 	print '<META http-equiv="refresh" CONTENT="0;URL=';
-	print 'http://54.148.224.187/tools/php/remove.php';
+	print 'http://goodbye-301660524.us-west-2.elb.amazonaws.com/tools/php/remove.php';
 	print '">';
 
 ?>
