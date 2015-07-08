@@ -31,28 +31,16 @@ setPages();
 //RESIZE
 $window.resize(function() { 
 	setPages();
-	// pushDown();
 });
 
 
-
-// EXAMPLES SCROLL
+// BEXAMPLES SCROLL
 $(".examples").click(function() {scrollToExamples();});
 
 function scrollToExamples(){
 	var $windowHeight = $window.height();
 	$("html, body").animate({scrollTop: $windowHeight}, 400);
 }
-
-
-// // Push stuff down
-// var $margin = $("#margintop");
-// function pushDown(){
-// 	if ($windowWidth<1024){
-// 		console.log($windowWidth);
-// 		$margin.css({"margin-top":"12vh"});}
-// 	else if($windowWidth>1024){$margin.css({"margin-top":"5vh"});}
-// }
 
 
 
@@ -62,8 +50,7 @@ function scrollToExamples(){
 
 
 
-
-// ANIMATE FAVORITE ON PAGE 3 
+// ANIMATE FAVORITE ON BUTTOM WEBSITE 
 
 function animateFavStar(){
 	
@@ -111,16 +98,6 @@ function exampleTweetActive(){
 };
 exampleTweetActive();
 
-
-
-
-// function removeId(){window.location.href = "index.html";}
-
-
-// var funqueue = [];
-// funqueue.push(exampleTweetActive);
-// funqueue.push(removeId);
-// (funqueue.shift())();
 
 
 
@@ -255,6 +232,7 @@ $(window).scroll(function(){
 	var parralax =  +scrollTop * 0.4 + 'px';
 	$windowwrapper.css({ "transform": "translateY("+ parralax +")" });
 });
+
 
 
 
