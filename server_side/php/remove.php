@@ -1,23 +1,20 @@
 <?php
+session_id($_GET['PHPSESSID']);
+session_start();
 require_once("twitteroauth.php");
 require './tmhOAuth.php';
 require './tmhUtilities.php';
 
 
-$rt = isset($_COOKIE["importanttw"]);
 
-if(isset($_COOKIE["importanttw"])!=""){
-	list($oauth_access_token,$oauth_access_token_secret)=explode(",",$_COOKIE["importanttw"]);
-}else{
-	$lnk = "http://www.shiroari.com";
-	header("Location: $lnk");
-}
+$oauth_access_token = $_SESSION['oauth_access_token'];
+$oauth_access_token_secret = $_SESSION['oauth_access_token_secret'];
 
 
 // Consumer keyの値
-$consumer_key = "2QCGxWNOaR9P5zPSnKggl1kqM";
+$consumer_key = "Z4megDutleofnn9exjcWrDJDj";
 // Consumer secretの値
-$consumer_secret = "q1E89M5CRsN3aHvrJ97qKctFpkJNhKDM9GcpHkUMKX3IrQrVTI";
+$consumer_secret = "vVEjTOACVwRVLlAQ2PQcGhVB2VHDO3mw1BIrPAglRVIBzG2vI7";
 // Access Tokenの値
 $access_token = $oauth_access_token;
 // Access Token Secretの値
@@ -60,7 +57,7 @@ mysql_select_db($dbname,$link);
 $res_result = mysql_query( "delete from $tblname where id = $tid;", $link);
 
 		print '<META http-equiv="refresh" CONTENT="0;URL=';
-		print 'http://goodbye-301660524.us-west-2.elb.amazonaws.com/tools/deactivate.html';
+		print 'http://www.adultswim.com/etcetera/goodbye-unfollower/deactivate.html';
 		print '">';
 
 

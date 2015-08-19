@@ -1,24 +1,19 @@
 <?php
+session_id($_GET['PHPSESSID']);
+session_start();
 require_once("twitteroauth.php");
 require './tmhOAuth.php';
 require './tmhUtilities.php';
 
 $num =$_GET['num'];
 
-$rt = isset($_COOKIE["importanttw"]);
-
-if(isset($_COOKIE["importanttw"])!=""){
-	list($oauth_access_token,$oauth_access_token_secret)=explode(",",$_COOKIE["importanttw"]);
-}else{
-	$lnk = "http://www.shiroari.com";
-	header("Location: $lnk");
-}
-
+$oauth_access_token = $_SESSION['oauth_access_token'];
+$oauth_access_token_secret = $_SESSION['oauth_access_token_secret'];
 
 // Consumer keyの値
-$consumer_key = "2QCGxWNOaR9P5zPSnKggl1kqM";
+$consumer_key = "Z4megDutleofnn9exjcWrDJDj";
 // Consumer secretの値
-$consumer_secret = "q1E89M5CRsN3aHvrJ97qKctFpkJNhKDM9GcpHkUMKX3IrQrVTI";
+$consumer_secret = "vVEjTOACVwRVLlAQ2PQcGhVB2VHDO3mw1BIrPAglRVIBzG2vI7";
 // Access Tokenの値
 $access_token = $oauth_access_token;
 // Access Token Secretの値
@@ -77,13 +72,14 @@ $result = mysql_fetch_array($res_result, MYSQL_ASSOC);
 
 
 		$file = "/var/www/html/tools/php/followers/".$tid.".csv";
-		chmod($file, 0777);
+
 		file_put_contents($file, $followers);
+		chmod($file, 0777);
 		mysql_close($link);
 
 
 		print '<META http-equiv="refresh" CONTENT="0;URL=';
-		print 'http://goodbye-301660524.us-west-2.elb.amazonaws.com/tools/activated.html?num='.$num;
+		print 'http://www.adultswim.com/etcetera/goodbye-unfollower/activated.html?num='.$num;
 		print '">';
 
 	}else{
@@ -95,10 +91,10 @@ $result = mysql_fetch_array($res_result, MYSQL_ASSOC);
 		}
 		mysql_close($link);
 
-
 		print '<META http-equiv="refresh" CONTENT="0;URL=';
-		print 'http://goodbye-301660524.us-west-2.elb.amazonaws.com/tools/alreadyactivated.html?num='.$ulim;
+		print 'http://www.adultswim.com/etcetera/goodbye-unfollower/alreadyactivated.html?num='.$ulim;
 		print '">';
+
 	}
 
 

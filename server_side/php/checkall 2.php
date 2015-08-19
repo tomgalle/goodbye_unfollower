@@ -25,10 +25,10 @@ $res_result = mysql_query( "SELECT * FROM  $tblname;", $link);
 
 
 while($row = mysql_fetch_array($res_result, MYSQL_ASSOC)){
-// Consumer keyの値
-$consumer_key = "Z4megDutleofnn9exjcWrDJDj";
-// Consumer secretの値
-$consumer_secret = "vVEjTOACVwRVLlAQ2PQcGhVB2VHDO3mw1BIrPAglRVIBzG2vI7";
+		// Consumer keyの値
+		$consumer_key = "2QCGxWNOaR9P5zPSnKggl1kqM";
+		// Consumer secretの値
+		$consumer_secret = "q1E89M5CRsN3aHvrJ97qKctFpkJNhKDM9GcpHkUMKX3IrQrVTI";
 		// Access Tokenの値
 		$access_token = $row['token'] ;
 		// Access Token Secretの値
@@ -56,11 +56,11 @@ $consumer_secret = "vVEjTOACVwRVLlAQ2PQcGhVB2VHDO3mw1BIrPAglRVIBzG2vI7";
 		$prev = file_get_contents('/var/www/html/tools/php/followers/'.$tid.'.csv');
 		$list = explode(",", $prev);
 
-		$prevlist = array("0");
+		$prevlist = array();
 
 		if(file_exists ( '/var/www/html/tools/php/lasts/'.$tid.'.csv')){
 			$prevunf = file_get_contents('/var/www/html/tools/php/lasts/'.$tid.'.csv');
-			$prevlist = explode(",", $prevunf);
+			$prevlist = explode(",", $prev);
 		}
 
 
@@ -88,10 +88,9 @@ $consumer_secret = "vVEjTOACVwRVLlAQ2PQcGhVB2VHDO3mw1BIrPAglRVIBzG2vI7";
 					if($plim < 5 && $ulim >0){
 						if (!strstr($followers, $list[$count])) {
 							$log .= $list[$count];
-							//echo $list[$count];
+							echo $list[$count];
 				
 							$doubles = 0;
-							echo "ddd".count($prevlist)."sss";
 							for($j = 0; $j<count($prevlist); $j++){
 								if($prevlist[$j] == $list[$count]){
 									$doubles = 1;

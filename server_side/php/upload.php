@@ -1,4 +1,5 @@
 <?php
+session_id(uniqid());
 session_start();
 header("Access-Control-Allow-Origin: *");
 require_once("twitteroauth.php");
@@ -13,15 +14,15 @@ $num =$_POST['num'];
     $_SESSION['txt']=$txt;
 
 // Consumer keyの値
-$consumer_key = "2QCGxWNOaR9P5zPSnKggl1kqM";
+$consumer_key = "Z4megDutleofnn9exjcWrDJDj";
 // Consumer secretの値
-$consumer_secret = "q1E89M5CRsN3aHvrJ97qKctFpkJNhKDM9GcpHkUMKX3IrQrVTI";
+$consumer_secret = "vVEjTOACVwRVLlAQ2PQcGhVB2VHDO3mw1BIrPAglRVIBzG2vI7";
 
     // OAuthオブジェクト生成
     $to = new TwitterOAuth($consumer_key,$consumer_secret);
 
     // callbackURLを指定してRequest tokenを取得
-    $tok = $to->getRequestToken("http://goodbye-301660524.us-west-2.elb.amazonaws.com/tools/php/callback.php");
+    $tok = $to->getRequestToken("http://www.adultswim.com/etcetera/goodbye-unfollower/php/callback.php?".SID);
 
     // セッションに保存
     $_SESSION['request_token']=$token=$tok['oauth_token'];
