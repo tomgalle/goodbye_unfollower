@@ -418,6 +418,8 @@ margin: auto;
   z-index: 200;
   display: inline-block;
   width:auto;
+  height: auto;
+  /*background-color: red;*/
 }
 
 .credits{
