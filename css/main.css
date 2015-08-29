@@ -86,18 +86,46 @@ background-color: black;
 
 
 
+/*   TWITTERMESSAGE   */
 
 
 
+
+.twittermessage{
+	font-family: Apercu-Light;
+	color: white;
+	width: 100%;
+	height: auto;
+	z-index: 200;
+	display: inline-block;
+	position: absolute;
+	top:0;
+	left:0;
+	right:0;
+	margin: auto;
+	vertical-align: middle;
+	text-align: center;
+	background-color: #00aced;
+}
+
+.twittermessage p {
+	font-size: 15px;
+  	padding: 1vh 3vw;
+  	line-height: 25px;
+}
+
+.twittermessage a {color: white;}
+.twittermessage a:hover {border-bottom: 2px solid white;}
+
+.smallbutton{
+	display: none;
+}
 
 
 
 
 
 /*   CENTERPIECE   */
-
-
-
 
 .centerpiece{
 	width: 850px;
@@ -114,15 +142,12 @@ background-color: black;
 .block{
 	width: 280px;
 	height: 60px;
-	/*margin-top: 3vw;*/
 	display: inline-block;
 	vertical-align: middle;  
-	/*background-color: orange;*/
 }
 
 
 .circle{
-	/*border-radius: 50%;*/
 	width: 70px;
 	height: 70px; 
 	z-index: 100;
@@ -476,37 +501,14 @@ margin: auto;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*  TABLET  */
 
-@media screen and (max-width: 768px) {
+/*@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+{*/
+
+@media screen and (max-width: 1024px) {
 
 /*body{font-family: Apercu;}*/
 
@@ -515,7 +517,24 @@ body{
    	font-weight: bold;
 }
 
-video{display: none;}
+video {display: none;}
+
+
+
+
+.twittermessage p {
+	font-size: 16px;
+  	padding: 1.4vh 3vw;
+  	line-height: 22px;
+  	font-family: 'Helvetica', 'Arial', sans-serif;
+  	font-weight: lighter;
+}
+
+.twittermessage a {color: white;border-bottom: 1px solid white;}
+
+
+
+
 
 .pageone{
 	background: url(../img/video1_scr.jpg)no-repeat center center;
@@ -593,7 +612,7 @@ video{display: none;}
 
 
 .button{
-	margin-top: 90px;
+	margin-top: 45px;
 	width: 250px;
 	height: 30px;
 	padding-top: 20px;
@@ -605,12 +624,9 @@ video{display: none;}
 .subpageheader{
 	font-weight: normal;
 	padding: 0 15vw;
-
 }
 
 .tweetswrapper{font-weight: normal;}
-
-
 
 .actiontweettext{
 	font-size: 29px;
@@ -654,6 +670,8 @@ video{display: none;}
 
 
 
+
+
 /*  RETINA DISPLAYS  */
 
 @media(-webkit-min-device-pixel-ratio: 2), 
@@ -674,6 +692,12 @@ video{display: none;}
 
 
 
+
+
+
+
+
+
 }
 
 
@@ -688,7 +712,6 @@ video{display: none;}
 @media screen and (max-width: 480px) {
 
 video{display: none;}
-
 .pageone{
 	background: url(../img/video1_scr.jpg)no-repeat center center;
   	-webkit-background-size: cover;
@@ -696,6 +719,43 @@ video{display: none;}
   	-o-background-size: cover;
   	background-size: cover;
 }
+
+
+.twittermessage p {
+	font-size: 14px;
+  	padding: 1vh 3vw;
+  	line-height: 20px;
+  	font-family: 'Helvetica', 'Arial', sans-serif;
+  	font-weight: lighter;
+}
+
+.twittermessage a {color: white;border-bottom: 1px solid white;}
+
+.smallbutton{
+	display: inline-block;
+	background-color: white;
+	width: 120px;
+	height: 30px;
+	color: #444444;
+	left: 0;
+	right: 0;
+	margin: auto;
+	margin-bottom: 2.7vh;
+	position: relative;
+	bottom: 2px;
+	/*cursor: pointer;*/
+}
+
+.smallbutton p {
+	/*display: inline-block;*/
+	text-align: center;
+	font-size: 15px;
+	font-weight: bold;
+	position: relative;
+	bottom: 14px;
+
+}
+
 
 
 .logotop{
@@ -725,6 +785,7 @@ video{display: none;}
   	left: 0;
   	right: 0;
   	margin: 0 auto;
+  	/*background-color: red;*/
 }
 
 .circle{
@@ -983,13 +1044,13 @@ video{display: none;}
 
 
 
-
-
-
-
-
-
 } /* --> END PHONE  */
+
+
+
+
+
+
 
 
 

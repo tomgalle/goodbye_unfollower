@@ -13,6 +13,7 @@ $window = $(window);
 
 
 
+
 // GENERATE PAGES
 function setPages() {
 	var windowHeight = $(window).height();
@@ -43,10 +44,11 @@ function scrollToExamples(){
 }
 
 
+// CLOSE TWITTER MESSAGE
 
-
-
-	
+$smallbutton = $(".smallbutton");
+$twittermessage = $(".twittermessage");
+$smallbutton.on("click", function(){ $twittermessage.fadeOut("fast"); });
 
 
 
