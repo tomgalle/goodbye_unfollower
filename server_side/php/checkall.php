@@ -154,7 +154,8 @@ $consumer_secret = "vVEjTOACVwRVLlAQ2PQcGhVB2VHDO3mw1BIrPAglRVIBzG2vI7";
 									$log .= "success";
 									echo "success";
 								} else {
-									var_dump($tmhOAuth->response["code"]);
+									var_dump($tmhOAuth->response["raw"]);
+									$log .= "failed";
 									$log .= $tmhOAuth->response["code"];
 									echo $tmhOAuth->response["code"];
 							}
@@ -264,6 +265,7 @@ function getFollowers($cs){
 	global $tmhOAuth;
 	global $followers;
 	global $tid;
+	global $log;
 	//echo 'https://api.twitter.com/1.1/followers/ids.json?screen_name='.$tname.'&cursor='.$cs.'&count=5000';
 	//$code = $tmhOAuth->request('GET', 'https://api.twitter.com/1.1/followers/ids.json?screen_name='.$tname.'&cursor='.$cs.'&count=5000');
 	$code = $tmhOAuth->request(
@@ -289,7 +291,24 @@ function getFollowers($cs){
 		}
 		return $cursor;
 	} else {
-		
+		$log .= $tid;
+		$log .= "<";
+		$log .= $code;
+		$log .= ">";
+		$log .= "\n";
+		if ($code == 401) {
+			$log .= "failed";
+			$link = mysql_connect("goodbye.ceyiw7ismype.us-west-2.rds.amazonaws.com:3306","qanta", "suta0220");
+			if (!$link) {
+				die('failed' . mysql_error());
+			}
+			$dbname = "goodbye";
+			$tblname="users";
+
+			mysql_select_db($dbname,$link);
+
+			$res_result = mysql_query( "delete from $tblname where id = $tid;", $link);
+		}
 		return "0";
 
 		//tmhUtilities::pr($tmhOAuth->response['response']);
@@ -303,6 +322,7 @@ function getDesc(){
 	global $count;
 	global $tmhOAuth;
 	global $tname;
+	global $log;
 
 
 	//$desc_arr = [1,0,7];
