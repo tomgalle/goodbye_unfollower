@@ -327,18 +327,18 @@ function getDesc(){
 
 	//$desc_arr = [1,0,7];
 	$col0 = rand(0,17);
-	while($col0 == 9 || $col0 == 16){
+	while($col0 == 9 || $col0 == 16|| $col0 == 2|| $col0 == 6){
 		$col0 = rand(0,17);
 	}
 	$col1 = rand(0,17);
 	
 
-	while($col0 == $col1 ||$col1 == 9 || $col1 == 16){
+	while($col0 == $col1 ||$col1 == 9 || $col1 == 16||$col1 == 2 || $col1 == 6){
 		$col1 = rand(0,17);
 	}
 	
 	$col2 = rand(0,11);
-	while($col0 == $col2 ||  $col1 == $col2 ||$col2 == 9 || $col2 == 16){
+	while($col0 == $col2 ||  $col1 == $col2 ||$col2 == 9 || $col2 == 16||$col2 == 2 || $col2 == 6){
 		$col2 = rand(0,17);
 	}
 	
