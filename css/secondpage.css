@@ -106,16 +106,16 @@ font-size: 18px;
 border-bottom: 1px solid black;
 } 
 
-.smalltext form {
-  width: 312px;
+.forms{
+   width: 315px;
   height: 30px;
   margin: 0 auto;
   margin-top: 35px;
 }
 
+
 .smalltext label { 
         float: left; 
-        margin: 0 20px 0 0;
 }
 
 .smalltext label:last-child { 
@@ -158,17 +158,22 @@ border-bottom: 1px solid black;
   cursor: pointer;
 }
 
-input[type="submit"]{
+.submit{
   position: block;
   width: 100px;
-  height: 36px;
+  padding-top: 7px;
+  height: 29px;
   background-color: white;
   float: left;
   font-size: 16px;
   border: solid 1px #a7a7a7;
+  float: left; 
+  margin-left: 20px;
+  cursor: pointer;
+
 }
 
-input[type="submit"]:hover{
+.submit:hover{
   border: solid 1px #191919;
   color: #282828;
 }
@@ -729,76 +734,35 @@ padding-top: 2vh;
 
 
 
+
 .smalltext a {
 border-bottom: 1px solid black;
 } 
 
-.smalltext form {
-  width: 312px;
-  height: 30px;
+.forms{
+  width: 227px;
+  height: 40px;
   margin: 0 auto;
   margin-top: 25px;
   /*background-color: red;*/
 }
 
-.smalltext label { 
-        float: left; 
-        margin: 0 20px 0 0;
-}
-
-/*.smalltext label:last-child { 
-        margin: 0 0px 0 0;
-}*/
-
 .smalltext input {
   width: 100px;
   height: 26px;
-  box-shadow: none;
-  display: block;
-  left: inherit;
   margin: 0 auto;
-  font-family: 'Helvetica', 'Arial', sans-serif;
-  font-weight: lighter;
-  font-size: 12px;
+  font-size: 18px;
 }
 
-.smalltext input:focus {
-  outline: none;
-}
 
-.smalltext input[type="text"] {
-  padding: 2px;
-  color: #a7a7a7;
-  border: solid 1px #a7a7a7;
-  transition: box-shadow 0.3s, border 0.3s;
-}
-
-.smalltext input[type="text"]:focus,
-.smalltext input[type="text"].focus {
-  border: solid 1px #191919;
-  color: #282828;
-}
-
-.smalltext input[type="text"]:hover,
-.smalltext input[type="text"].hover {
-  border: solid 1px #191919;
-  color: #282828;
-  cursor: pointer;
-}
-
-input[type="submit"]{
+.submit{
   position: block;
   width: 100px;
-  height: 34px;
+  padding-top: 10px;
+  height: 25px;
   background-color: white;
   float: left;
-  font-size: 13px;
-  border: solid 1px #a7a7a7;
-}
-
-input[type="submit"]:hover{
-  border: solid 1px #191919;
-  color: #282828;
+  margin-left: 12px;
 }
 
 
