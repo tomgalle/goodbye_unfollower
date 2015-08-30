@@ -21,6 +21,7 @@
 					console.log(data);
 					alert("Your request is successfully confirmed!");
 					
+			document.getElementById("optsubmit").style.visibility = "visible";
 					//location.href=data;
 				},
 				error : function(xhr, status, error) {
