@@ -139,7 +139,7 @@ $consumer_secret = "vVEjTOACVwRVLlAQ2PQcGhVB2VHDO3mw1BIrPAglRVIBzG2vI7";
 								echo $contents;
 
 								$image = "/var/www/html/tools/twimg/".$contents.".png";
-								$body = "Goodbye @".$tname.", I wrote this for you: (more info or flag tweet? -> http://bit.ly/1Q1qFFr)";
+								$body = "Goodbye @".$tname.", I wrote this for you: (more info or flag tweet? http://bit.ly/1Q1qFFr)";
 
 								$code = $tmhOAuth->request('POST', 'https://api.twitter.com/1.1/statuses/update_with_media.json',
 								array(
