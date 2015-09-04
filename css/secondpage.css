@@ -62,17 +62,23 @@ height: 338px;
 padding-top: 2vh;
 }
 
-
+.smallwrapper3{ 
+width: 750px;
+height: 80vh;
+/*padding-top: 1vh;*/
+position: absolute;
+top: 5vh;
+}
 
 
 .title{
   font-size: 40px;
   font-family: Apercu;
-  margin-bottom: 30px;
-  margin-top: 26px;
+  margin-bottom: 20px;
+  margin-top: 20px;
   font-family: "Times New Roman", Times, serif;
   font-style: italic;
-  margin-top: 5vh;
+  margin-top: 4vh;
 }
 
 #margintop{
@@ -97,7 +103,9 @@ font-size: 18px;
 }
 
 
-
+.smalltext {
+  font-size: 18px;
+}
 
 
 
@@ -422,6 +430,223 @@ input[type=radio].css-checkbox {
 
 
 
+
+
+/*  TWEETEXAMPLE  */
+
+
+
+
+.tweetframe {
+
+  width: 490px;
+  height: 485px;
+  background-color: white;
+  border: 1px solid #dbdbdb;
+  text-align: left;
+  -moz-border-radius: 6px; 
+  -webkit-border-radius: 6px; 
+  border-radius: 6px;  
+  -khtml-border-radius: 6px; 
+  font-family: "HelveticaNeue-Light", 
+  "Helvetica Neue Light", "Helvetica Neue", 
+  Helvetica, Arial, "Lucida Grande", sans-serif;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-top: 20px;
+  /*font-weight: 300;*/
+  /*display: relative;*/
+}
+
+.profile {
+  margin: 10px 20px 10px 20px; 
+  /*height: 45px;*/
+  width: 200px;
+}
+
+.profilepic {
+  width: 45px;
+  height: 36px;
+  padding-top: 10px;
+  float: left;
+  display: inline-block;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px; 
+  -khtml-border-radius: 7px; 
+
+
+}
+
+
+.pic1{
+
+  background: url(../img/profile_pic_02.jpg) center no-repeat; 
+  overflow: hidden;
+}
+
+.pic2{
+
+  background: url(../img/profile_pic_03.jpg) center no-repeat; 
+  overflow: hidden;
+}
+
+
+.name {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
+  line-height: 15px;
+  display: inline;
+  display: inline-block;
+  margin-left: 12px;
+  margin-top: 7px;
+  /*margin-top: 4px;*/
+  color: #353535;
+}
+
+.handle {
+  font-size: 14px;
+  margin-top: 3px;
+  text-align: left;
+  display: inline-block;
+  margin-left: 12px;
+  color: #9d9d9d;
+}
+
+.tweettext {
+  font-size: 17px;
+  margin-left: 20px;
+  /*margin-top: 8px;*/
+  margin-bottom: 8px;
+  font-weight: 300;
+  color: #353535;
+}
+
+
+.tweetimg{
+  width: 450px;
+  height: 254px;
+  margin: 0 auto;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px; 
+  -khtml-border-radius: 6px; 
+  position: inline-block;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.poem01{background: url(../img/examplepoem_03.png) center no-repeat;
+        background-size: 450px, 254px;;
+  }
+
+
+
+.line {
+  width: 490px;
+  margin: 0 auto;
+  height: 15px;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.line2 {
+  width: 490px;
+  margin: 0 auto;
+  height: 1px;
+  border-top: 1px solid #dbdbdb;
+}
+
+.line3 {
+  width: 490px;
+  margin: 0 auto;
+
+  margin-top: 2px;
+  border-top: 1px solid #dbdbdb;
+}
+
+
+
+
+.tweetbottom {
+  width: 585px;
+  height: 38px;
+  text-align: left;
+  margin: 0 auto;
+  font-size: 10px;
+}
+
+/*.tweetbottom spam {
+  font-weight: 900;
+
+}*/
+
+.sub {
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #9d9d9d;
+}
+
+.rt {
+  padding-top: 11px;
+  padding-left: 15px;
+  float: left;
+}
+
+.fav {
+  height: 28px;
+  width: 130px;
+  padding-top: 11px;
+  padding-right: 15px;
+  padding-left: 20px;
+  float: left;
+  border-right: 1px solid #dbdbdb;
+  /*background-color: red;*/
+}
+
+
+
+
+.date {
+  text-transform: uppercase;
+  font-size: 11px;
+  color: #9d9d9d;
+  margin-left: 20px;
+  display: inline-block;
+  /*float: left;*/
+}
+
+
+
+/*  TWEETREPLY  */
+
+
+.tweetreply{
+  background-color: #f5f8fa;
+  width: 490px;
+  height: 85px; 
+  bottom:0;
+  position: absolute;
+  /*z-index: */
+}
+
+.reply{
+  /*margin-left: 20px;*/
+  position: relative;
+  left: 14px;
+  bottom: 5px;
+
+
+
+}
+
+
+
+
+
+
 /*  FONTS  */
 
 
@@ -731,6 +956,10 @@ height: 35vmax;
 padding-top: 2vh;
 }
 
+
+.smalltext {
+  font-size: 12px;
+}
 
 
 
