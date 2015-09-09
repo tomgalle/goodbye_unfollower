@@ -48,6 +48,8 @@ bottom: 0;
 left: 0;
 right: 0;
 margin: auto;
+/*background-color: red;*/
+/*padding: 20px;*/
 }
 
 
@@ -62,24 +64,33 @@ height: 338px;
 padding-top: 2vh;
 }
 
+
 .smallwrapper3{ 
-width: 750px;
-height: 80vh;
-/*padding-top: 1vh;*/
 position: absolute;
-top: 5vh;
+width: 100%;
+height: 100%;
+max-width: 700px;
+max-height: 700px;
+background-color: white;
+text-align: center;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;
 }
 
 
 .title{
-  font-size: 40px;
+  font-size: 36px;
   font-family: Apercu;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin-bottom: 0.8vmax;
+  /*margin-top: 18px;*/
   font-family: "Times New Roman", Times, serif;
   font-style: italic;
-  margin-top: 4vh;
+  margin-top: 2vmax;
 }
+
 
 #margintop{
   margin-top: 8vh;
@@ -185,8 +196,6 @@ border-bottom: 1px solid black;
   border: solid 1px #191919;
   color: #282828;
 }
-
-
 
 
 
@@ -432,15 +441,22 @@ input[type=radio].css-checkbox {
 
 
 
+
+
+
+
 /*  TWEETEXAMPLE  */
 
 
 
 
-.tweetframe {
 
-  width: 490px;
-  height: 485px;
+
+.tweetframe {
+  width: 100%;
+  height: 100%;
+  max-width: 490px;
+  max-height: 485px;
   background-color: white;
   border: 1px solid #dbdbdb;
   text-align: left;
@@ -456,14 +472,13 @@ input[type=radio].css-checkbox {
   right: 0;
   margin: auto;
   margin-top: 20px;
-  /*font-weight: 300;*/
-  /*display: relative;*/
 }
+
 
 .profile {
   margin: 10px 20px 10px 20px; 
-  /*height: 45px;*/
-  width: 200px;
+  width: 100%;
+  max-width: 150px;
 }
 
 .profilepic {
@@ -476,19 +491,15 @@ input[type=radio].css-checkbox {
   -webkit-border-radius: 7px;
   border-radius: 7px; 
   -khtml-border-radius: 7px; 
-
-
 }
 
 
 .pic1{
-
   background: url(../img/profile_pic_02.jpg) center no-repeat; 
   overflow: hidden;
 }
 
 .pic2{
-
   background: url(../img/profile_pic_03.jpg) center no-repeat; 
   overflow: hidden;
 }
@@ -503,7 +514,6 @@ input[type=radio].css-checkbox {
   display: inline-block;
   margin-left: 12px;
   margin-top: 7px;
-  /*margin-top: 4px;*/
   color: #353535;
 }
 
@@ -519,7 +529,6 @@ input[type=radio].css-checkbox {
 .tweettext {
   font-size: 17px;
   margin-left: 20px;
-  /*margin-top: 8px;*/
   margin-bottom: 8px;
   font-weight: 300;
   color: #353535;
@@ -527,8 +536,10 @@ input[type=radio].css-checkbox {
 
 
 .tweetimg{
-  width: 450px;
-  height: 254px;
+  width: 100%;
+  height: 100%;
+  max-width: 450px;
+  max-height: 254px;
   margin: 0 auto;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -537,12 +548,23 @@ input[type=radio].css-checkbox {
   position: inline-block;
   overflow: hidden;
   z-index: 100;
+  /*background-color: red;*/
+
 }
-
+/*
 .poem01{background: url(../img/examplepoem_03.png) center no-repeat;
-        background-size: 450px, 254px;;
-  }
+        background-size: 100%, 100%;
+    }
+*/
+.poemimg{
+width: 110%;
+height:110%;
+position: relative;
+bottom: 10px;
+/*position: absolute;*/
 
+
+}
 
 
 .line {
@@ -562,13 +584,9 @@ input[type=radio].css-checkbox {
 .line3 {
   width: 490px;
   margin: 0 auto;
-
   margin-top: 2px;
   border-top: 1px solid #dbdbdb;
 }
-
-
-
 
 .tweetbottom {
   width: 585px;
@@ -577,11 +595,6 @@ input[type=radio].css-checkbox {
   margin: 0 auto;
   font-size: 10px;
 }
-
-/*.tweetbottom spam {
-  font-weight: 900;
-
-}*/
 
 .sub {
   text-transform: uppercase;
@@ -603,11 +616,7 @@ input[type=radio].css-checkbox {
   padding-left: 20px;
   float: left;
   border-right: 1px solid #dbdbdb;
-  /*background-color: red;*/
 }
-
-
-
 
 .date {
   text-transform: uppercase;
@@ -615,33 +624,111 @@ input[type=radio].css-checkbox {
   color: #9d9d9d;
   margin-left: 20px;
   display: inline-block;
-  /*float: left;*/
 }
+
 
 
 
 /*  TWEETREPLY  */
 
 
-.tweetreply{
+
+
+
+.tweetreply {
+  display: inline-block;
   background-color: #f5f8fa;
   width: 490px;
-  height: 85px; 
-  bottom:0;
+  height: 84px; 
+  -moz-border-radius: 6px; 
+  -webkit-border-radius: 6px; 
+  border-radius: 6px;  
+  -khtml-border-radius: 6px; 
   position: absolute;
-  /*z-index: */
 }
+
+
+.tweetreplybox{
+  display: inline-block;
+  background-color: #f5f8fa;
+  width: 450px;
+  height: 51px; 
+  -moz-border-radius: 6px; 
+  -webkit-border-radius: 6px; 
+  border-radius: 6px;  
+  -khtml-border-radius: 6px; 
+  border: 1px solid #dbdbdb;
+  background-color: white;
+   position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
 
 .reply{
-  /*margin-left: 20px;*/
-  position: relative;
-  left: 14px;
-  bottom: 5px;
+  position: absolute;
+  top: 15px;
+  left: 20px;
+}
 
-
+.markercircle{
+  width: 200px;
+  height: 100px;
+  z-index: 20000;
+  background: url(../img/markercircle.png) no-repeat center center;
+  background-size: 90%, 90%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
 
 }
 
+.markerarrow{
+  position: absolute;
+  background: url(../img/markerarrow.png) no-repeat center center;
+  background-size: 50%, 50%;
+  width: 100%;
+  height: 100%;
+  max-width: 100px;
+  max-height: 100px;
+  z-index: 20000;
+  -webkit-transform: rotate(125deg);
+  -moz-transform:    rotate(125deg);
+  -ms-transform:     rotate(125deg);
+  -o-transform:      rotate(125deg);
+  transform:         rotate(125deg);
+  bottom:5px;
+  left:170px;
+}
+
+.directions{
+  position: absolute;
+  bottom: 75px;
+  left: 190px;
+  color: red;
+  z-index: 20000;
+  font-family: 'Permanent Marker';
+  font-size: 23px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 26.4px;
+}
+
+.gotit{
+  z-index: 200000;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  height: 20px;
+  padding-top: 9px; 
+  width: 130px;
+
+}
 
 
 
@@ -712,10 +799,10 @@ width: 80vw;
 height: 50vmax;
 }
 
-.smallwrapper{
+/*.smallwrapper{
 width: 80vw;
 height: 50vmax;
-}
+}*/
 
 
 .smallwrapper2{ 
@@ -749,8 +836,8 @@ height: 370px;
 
 
 .title{
-  font-size: 3.5vmax;
-  margin-bottom: 4vmax;
+  font-size: 3.2vmax;
+  margin-bottom: 1.3vmax;
   font-family: "Times New Roman", Times, serif;
   font-style: italic;
 }
@@ -761,7 +848,7 @@ height: 370px;
   width: 68vw;
   height: auto;
   margin: 0 auto;
-  margin-bottom: 6vw;
+  margin-bottom: 0.3vmax;
 }
 
 .description2{
@@ -809,7 +896,7 @@ height: 370px;
 
 
 
-.sharetitle{
+/*.sharetitle{
       margin-top: 4vmax;
       font-size: 2.8vmax;
       font-family: Apercu;
@@ -836,6 +923,7 @@ height: 370px;
 
 .sharecircle:first-child{margin-right: 13px;}
 .sharecircle:last-child{margin-left: 13px;}
+*/
 
 
 
@@ -908,11 +996,10 @@ input[type=radio].css-checkbox {
 
 
 
+.tweetframe {
+  max-height: 490px;
 
-
-
-
-
+}
 
 
 
@@ -1003,7 +1090,7 @@ border-bottom: 1px solid black;
 
 
 .title{
-  font-size: 4.5vmax;
+  font-size: 4.2vmax;
   margin-bottom: 1.5vmax;
   margin-top: 2vmax;
   font-family: "Times New Roman", Times, serif;
@@ -1020,7 +1107,7 @@ border-bottom: 1px solid black;
   margin: 0 auto;
   /*background-color: gray;*/
   /*display: none;*/
-  margin-bottom: 2vmax;
+  margin-bottom: 1.5vmax;
 }
 
 
@@ -1056,6 +1143,15 @@ border-bottom: 1px solid black;
   color: black;
 
 }
+
+.back{
+  font-size: 14px;
+  border-bottom: 1px solid white;
+  width: 49px;
+  bottom: 15px;
+}
+
+
 
 
 
@@ -1158,6 +1254,211 @@ input[type=radio].css-checkbox {
 
 
 
+
+
+
+
+
+
+
+/*  TWEETEXAMPLE  */
+
+
+/*  max-width: 490px;
+  max-height: 485px;*/
+
+
+.smallwrapper3{
+  width: 100%;
+  height: 100%;
+  width: 85vw;
+  height: 80vh;
+  max-height: 520px;
+
+}
+
+
+.tweetframe {
+  width: 100%;
+  height: 100%;
+  /*max-width: 230px;*/
+/*  max-height: 228px;*/
+  height: 57%;
+  width: 85%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  /*margin-top: 20px;*/
+}
+
+
+.profile {
+  margin: 8px 10px 0px 8px; 
+  width: 100%;
+  /*max-width: 150px;*/
+  /*background-color: red;*/
+}
+
+.profilepic {
+  width: 36px;
+  height: 28px;
+  padding-top: 10px;
+}
+
+
+.name {
+  font-size: 12px;
+  font-weight: bold;
+  text-align: left;
+  line-height: 12px;
+  display: inline;
+  display: inline-block;
+  margin-left: 12px;
+  margin-top: 7px;
+  color: #353535;
+}
+
+.handle {
+  font-size: 12px;
+  margin-top: 2px;
+  text-align: left;
+  display: inline-block;
+  margin-left: 12px;
+  color: #9d9d9d;
+}
+
+.tweettext {
+  font-size: 2.2vmax;
+  margin-left: 8px;
+  /*margin-bottom: 8px;*/
+  /*font-weight: 300;*/
+  /*color: #353535;*/
+}
+
+
+.tweetimg{
+  width: 100%;
+  height: 100%;
+  max-width: 93%;
+  max-height: 46%;
+}
+
+
+.poemimg{
+/*  position: relative;
+*/bottom: 5px;
+}
+
+
+
+.line {
+  width: 100%;
+  height: 10px;
+}
+
+.line2, .line3, .tweetbottom{ display: none;}
+
+
+
+
+/*  TWEETREPLY  */
+
+
+.tweetframe{
+  /*background-color: red;*/
+}
+
+
+.tweetreply {
+  display: inline-block;
+  /*background-color: #f5f8fa;*/
+  background-color: white;
+  /*width: 490px;*/
+  height: 40px; 
+  width: 100%;
+
+  /*height: 100%;*/
+  /*height: 100%;*/
+  /*overflow: hidden;*/
+  /*position: absolute;*/
+  -moz-border-radius: 0px; 
+  -webkit-border-radius: 0px; 
+  border-radius: 0px;  
+  -khtml-border-radius: 0px; 
+  /*z-index: 0;*/
+  /*display: none;*/
+  /*background-color: red;*/
+}
+
+
+.tweetreplybox{
+  display: inline-block;
+  background-color: #f5f8fa;
+  width: 95%;
+  height: 70%; 
+  background-color: white;
+  bottom: 0vmax;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.reply{
+  position: absolute;
+  top: 4px;
+  left: 20px;
+  font-size: 14px;
+  
+}
+
+.markercircle{
+  /*width: 813px;*/
+  /*height: 458px;*/
+  width: 60%;
+  height: 32%;
+
+  background: url(../img/markercircle.png) no-repeat center center;
+  background-size: 100%, 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  max-width: 163px;
+  max-height: 92px;
+  /*background-color: gray;*/
+
+}
+
+.markerarrow{
+  position: absolute;
+  background: url(../img/markerarrow.png) no-repeat center center;
+  background-size: 35%, 35%;
+  width: 100%;
+  height: 100%;
+  max-width: 100px;
+  max-height: 100px;
+  bottom:3%;
+  left:45%;
+}
+
+.directions{
+  position: absolute;
+  bottom: 6%;
+  left: 70%;
+  color: red;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.gotit{
+  bottom: 15px;
+  height: 15px;
+  padding-top: 4px; 
+  width: 100px;
+}
+
+
+
 }
 
 
@@ -1167,6 +1468,30 @@ input[type=radio].css-checkbox {
 
 
 
+
+@media screen and (max-width: 320px) {
+.footerleft{display: none;}
+.footerright{display: none;}
+
+
+
+/*.markercircle{
+  left: 10px;
+  bottom: -10px;
+}*/
+
+.tweetframe{
+  height: 59%;
+}
+
+
+
+/*.footerleft{
+  display: none;
+}
+*/
+
+}
 
 
 
