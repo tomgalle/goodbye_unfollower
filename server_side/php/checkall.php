@@ -139,7 +139,7 @@ $consumer_secret = "vVEjTOACVwRVLlAQ2PQcGhVB2VHDO3mw1BIrPAglRVIBzG2vI7";
 								echo $contents;
 
 								$image = "/var/www/html/tools/twimg/".$contents.".png";
-								$body = "Goodbye @".$tname.", I wrote this for you: (more info or flag tweet? http://bit.ly/1Q1qFFr)";
+								$body = "Goodbye ".$tname.", I wrote this for you: ";
 
 								$code = $tmhOAuth->request('POST', 'https://api.twitter.com/1.1/statuses/update_with_media.json',
 								array(
@@ -393,9 +393,9 @@ function getDesc(){
 			$txt .= "a goodbye in dignity, I wrote for you,!---!the 140 characters I just tweeted to you, adieu";
 			$ran = rand(0,1);
 			if($ran == 0){
-				$body = "Goodbye @".$tname.", I'm sad to see you go.";
+				$body = "Goodbye ".$tname.", I'm sad to see you go.";
 			}else{
-				$body = "Goodbye @".$tname.", I'm sad to see you go.";
+				$body = "Goodbye ".$tname.", I'm sad to see you go.";
 			}
 			$code = $tmhOAuth->request('POST', 'https://api.twitter.com/1.1/statuses/update.json',
 			array(
@@ -508,7 +508,6 @@ function getRecommendText(){
 						if($i != 0){
 							$users .= "   ";
 						}
-						$users .= "@";
 						$users .= $pres -> {'users'}[$i] -> {'screen_name'};
 					}
 					$txt .= "!---!!---!";
